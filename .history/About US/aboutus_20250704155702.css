@@ -1,0 +1,369 @@
+.navbar-nav .nav-link:hover,
+   .navbar-nav .nav-link.active {
+       color: #af6f24 !important;
+   }
+body {
+ font-family: 'Crimson Text', serif;
+ background: #fff;
+}
+p {
+ font-size: 1.1rem;
+ line-height: 1.6;
+}
+.map-img {
+ width: 100%;
+ max-width: 400px;
+ height: auto;
+}
+.about-title {
+ color: #af6f24;
+ font-size: 1.5rem;
+ font-weight: 700;
+ margin-bottom: 1rem;
+}
+.glance-title {
+ font-size: 1.2rem;
+ font-weight: 600;
+ margin-bottom: 0.5rem;
+}
+.count {
+ font-size: 1.8rem;
+ font-weight: 600;
+}
+.count-label {
+ font-size: 1rem;
+ color: #555;
+}
+
+.connectivity-title, .admin-title {
+ color: #af6f24;
+ font-size: 1.8rem;
+ font-weight: 700;
+ text-align: center;
+ margin: 60px 0 30px;
+}
+
+.connect-card {
+ border: 1px solid #f5c78c;
+ border-radius: 15px;
+ padding: 25px;
+ box-shadow: 0 5px 10px rgba(0,0,0,0.05);
+ background-color: white;
+ height: 100%;
+ position: relative;
+}
+footer {
+       background-color: #b1783b;
+       color: white;
+       padding: 20px 0;
+   }
+.connect-icon {
+ background-color: #f8981d;
+ color: white;
+ font-size: 1.2rem;
+ width: 40px;
+ height: 40px;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ border-radius: 50%;
+ position: absolute;
+ top: 15px;
+ right: 15px;
+}
+
+.plug-img {
+ max-width: 100px;
+ height: auto;
+}
+
+/* Admin block styles - updated for compact layout like in Image 1 */
+.admin-blocks {
+ padding: 20px 0;
+ max-width: 1000px;
+ margin: 0 auto;
+}
+
+.admin-list {
+ list-style: none;
+ padding: 0;
+ margin: 0;
+}
+
+.admin-list li {
+display: flex
+;
+align-items: center;
+margin-bottom: 23px;
+font-size: 20PX;
+}
+.admin-number {
+ background-color: #c6842f;
+ color: white;
+ font-weight: bold;
+ border-radius: 5px;
+ width: 40px;
+ height: 40px;
+ margin-right: 10px;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+}
+
+.admin-image {
+ width: 76%;
+ border-top-right-radius: 129px;
+ height: auto;
+ max-height: 400px;
+ object-fit: fill;
+}
+
+/* Enhanced responsive design */
+@media (max-width: 991px) {
+ .count {
+   font-size: 1.5rem;
+ }
+ .count-label {
+   font-size: 0.9rem;
+ }
+}
+
+@media (max-width: 768px) {
+ .connect-card {
+   margin-bottom: 20px;
+ }
+ .admin-blocks .row > div {
+   margin-bottom: 30px;
+ }
+ .admin-number {
+   width: 35px;
+   height: 35px;
+   font-size: 0.9rem;
+ }
+ .connectivity-title, .admin-title {
+   font-size: 1.5rem;
+   margin: 40px 0 20px;
+ }
+}
+
+@media (max-width: 576px) {
+ .about-title {
+   font-size: 1.3rem;
+ }
+ .glance-title {
+   font-size: 1.1rem;
+ }
+ .count {
+   font-size: 1.3rem;
+ }
+ .count-label {
+   font-size: 0.8rem;
+ }
+ .admin-number {
+   width: 30px;
+   height: 30px;
+ }
+ .admin-list li {
+   font-size: 0.9rem;
+   margin-bottom: 10px;
+ }
+}
+
+/* Banner Styles */
+.banner-container {
+position: relative;
+width: 100%;
+height: 500px;
+overflow: hidden;
+margin-bottom: 30px;
+
+
+}
+
+.banner-image {
+ width: 100%;
+ height: 100%;
+ object-fit: cover;
+}
+
+.incentives-link {
+ position: absolute;
+ bottom: 20px;
+ right: 20px;
+ background-color: rgba(255, 255, 255, 0.9);
+ padding: 10px 15px;
+ border-radius: 8px;
+ font-weight: 600;
+ color: #b1783b;
+ text-decoration: none;
+ box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+ transition: all 0.3s ease;
+}
+
+.incentives-link:hover {
+ background-color: #b1783b;
+ color: white;
+}
+
+/* Responsive adjustments */
+@media (max-width: 767px) {
+ .section-title {
+   font-size: 1.4rem;
+ }
+ .icon-box {
+   flex-direction: column;
+   text-align: center;
+   align-items: center;
+ }
+ .icon-box i {
+   margin-bottom: 10px;
+ }
+ .form-section {
+   padding: 20px;
+ }
+ .contact-card {
+   min-height: auto;
+ }
+ .banner-container {
+   height: 500px;
+ }
+ .incentives-link {
+   font-size: 0.9rem;
+   padding: 8px 12px;
+ }
+}
+
+@media (max-width: 575px) {
+ .section-title {
+   font-size: 1.2rem;
+ }
+ .icon-box {
+   margin-bottom: 1rem;
+ }
+ .form-section {
+   padding: 15px;
+ }
+ .email-break {
+   word-break: break-all;
+ }
+ .banner-container {
+   height: 250px;
+ }
+ .incentives-link {
+   font-size: 0.8rem;
+   padding: 6px 10px;
+   bottom: 10px;
+   right: 10px;
+ }
+}
+body.scrolled {
+ padding-top: 90px; /* Add padding when navbar is fixed */
+}
+/* Navbar Styles */
+.navbar {
+ border-radius: 40px;
+ padding: 0.75rem 1.5rem;
+ background-color: white;
+ width: 100%;
+ max-width: 1320px;
+ margin: 0 auto;
+ transition: all 0.3s ease;
+}
+
+.navbar.fixed-top {
+ position: fixed;
+ top: 0;
+ left: 0;
+ right: 0;
+ z-index: 1030;
+ max-width: 100%;
+ border-radius: 0;
+ box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand img {
+ width: 50px;
+ height: auto;
+}
+
+.nav-link {
+ position: relative;
+ font-weight: 600;
+ color: black !important;
+ margin: 0 10px;
+ transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+ opacity: 0.8;
+}
+
+.nav-link.active::after {
+ content: "";
+ position: absolute;
+ bottom: 4px;
+ left: 0;
+ width: 100%;
+ height: 2px;
+ background-color: black;
+}
+
+/* Custom hamburger to X icon */
+.navbar-toggler {
+ border: none;
+ background: transparent;
+ padding: 0;
+}
+
+.navbar-toggler:focus {
+ box-shadow: none;
+}
+
+.navbar-toggler .navbar-toggler-icon {
+ background-image: none;
+ position: relative;
+ height: 24px;
+ width: 30px;
+ transition: all 0.3s ease;
+}
+
+.navbar-toggler .navbar-toggler-icon:before,
+.navbar-toggler .navbar-toggler-icon:after,
+.navbar-toggler .navbar-toggler-icon .middle-bar {
+ content: '';
+ position: absolute;
+ width: 100%;
+ height: 3px;
+ background-color: #333;
+ border-radius: 2px;
+ left: 0;
+ transition: all 0.3s ease;
+}
+
+.navbar-toggler .navbar-toggler-icon:before {
+ top: 0;
+}
+
+.navbar-toggler .navbar-toggler-icon .middle-bar {
+ top: 50%;
+ transform: translateY(-50%);
+}
+
+.navbar-toggler .navbar-toggler-icon:after {
+ bottom: 0;
+}
+
+.navbar-toggler[aria-expanded="true"] .navbar-toggler-icon:before {
+ transform: rotate(45deg);
+ top: 11px;
+}
+
+.navbar-toggler[aria-expanded="true"] .navbar-toggler-icon .middle-bar {
+ opacity: 0;
+}
+
+.navbar-toggler[aria-expanded="true"] .navbar-toggler-icon:after {
+ transform: rotate(-45deg);
+ bottom: 10px;
+}
+

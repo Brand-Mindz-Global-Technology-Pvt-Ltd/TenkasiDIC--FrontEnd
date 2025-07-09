@@ -1,0 +1,1513 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tenkasi District - Industrial Profile</title>
+    <link rel="shortcut icon" type="image/x-icon" href="../img/favicon.ico">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <!-- Google Fonts - Crimson Text -->
+  
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="./landingpage.css">
+
+</head>
+<body>
+
+    
+    <section class="header-banner">
+        <!-- Poster image that shows before video loads -->
+        <div class="video-poster" id="videoPoster">
+            <img src="../img/waterfall.jpg" alt="Loading..." class="poster-img">
+        </div>
+        
+        <video autoplay muted loop class="bg-video" id="bgVideo" poster="../img/video-poster.jpg">
+            <source src="../img/tenksai - REVERSE.webm" type="video/webm">
+            <!-- Fallback image if video fails to load -->
+        </video>
+        
+        <div class="header-overlay"></div>
+        <div class="header-content">
+            
+            <div class="container mt-4" style="position: absolute; top: 0; left: 0; right: 0; z-index: 10;">
+                <nav class="navbar navbar-expand-lg shadow" id="mainNav">
+                    <a class="navbar-brand" href="../LandingPage/LandingPage.html">
+                        <img src="../img/diclogo.jpg" alt="Logo" href="../LandingPage/LandingPage.html" />
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon">
+                            <span class="middle-bar"></span>
+                        </span>
+                    </button>
+                    <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                        <ul class="navbar-nav">
+                            <li class="nav-item"><a class="nav-link active" href="../LandingPage/LandingPage.html">Home</a></li>
+                            <li class="nav-item"><a class="nav-link" href="../About US/aboutus.html">About Us</a></li>
+                            <li class="nav-item"><a class="nav-link" href="../Industrial Profile/Industrial.html">Industrial Profile</a></li>
+                            <li class="nav-item"><a class="nav-link" href="../Incentive Page/Incentives.html">Incentives</a></li>
+                            <li class="nav-item"><a class="nav-link " href="../Schemes/Schemes.html">Schemes</a></li>
+                            <li class="nav-item"><a class="nav-link" href="../Contact Page/Contactus.html">Contact Us</a></li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+            <!-- End of navbar -->
+            
+            <div class="header-text-container">
+                <div class="header-logo-container">
+                    <img src="../img/govermentlogo.png" alt="Tamil Nadu Emblem" class="header-logo">
+                </div>
+                <h1 class="header-title">Department of Industries and Commerce</h1>
+                <h1 class="header-title">District Industries Centre, Tenkasi District</h1>
+                <p class="header-description">It supports MSMEs, startups, and entrepreneurs by providing financial assistance, subsidies, and training programs.</p>
+            </div>
+        </div>
+        
+    
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                const video = document.getElementById('bgVideo');
+                const poster = document.getElementById('videoPoster');
+    
+                // Hide poster when video can play
+                video.addEventListener('canplay', function() {
+                    video.classList.add('loaded');
+                    poster.classList.add('hidden');
+                });
+    
+                // Handle video load error
+                video.addEventListener('error', function() {
+                    console.log('Video failed to load, keeping poster image');
+                    // Poster will remain visible if video fails
+                });
+    
+                // Ensure video plays when loaded
+                video.addEventListener('loadeddata', function() {
+                    video.play().catch(function(error) {
+                        console.log('Autoplay prevented:', error);
+                    });
+                });
+            });
+        </script>
+    </section>
+
+<script>
+
+
+// JavaScript to make navbar fixed on scroll
+  window.addEventListener('scroll', function() {
+    const navbar = document.getElementById('mainNav');
+    const body = document.body;
+    
+    if (window.scrollY > 50) {
+      navbar.classList.add('fixed-top');
+      body.classList.add('scrolled');
+    } else {
+      navbar.classList.remove('fixed-top');
+      body.classList.remove('scrolled');
+    }
+  });
+  
+  
+ 
+  
+  // Close mobile menu when clicking outside
+ 
+</script>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    // Fixed navbar on scroll
+window.addEventListener('scroll', function() {
+const navbar = document.getElementById('mainNav');
+const body = document.body;
+const navbarContainer = navbar.parentElement;
+
+if (window.scrollY > 100) {
+  // When scrolled, make navbar fixed at top
+  navbar.classList.add('fixed-top');
+  navbar.classList.remove('position-relative');
+  body.classList.add('scrolled');
+  
+  // Remove the container's positioning to allow navbar to be full width
+  navbarContainer.classList.remove('position-absolute', 'top-0', 'start-50', 'translate-middle-x');
+  navbarContainer.style.width = '100%';
+  navbarContainer.style.maxWidth = '100%';
+  navbarContainer.style.padding = '0';
+} else {
+  // Reset to original state when at top
+  navbar.classList.remove('fixed-top');
+  navbar.classList.add('position-relative');
+  body.classList.remove('scrolled');
+  
+  // Restore the container's positioning
+  navbarContainer.classList.add('position-absolute', 'top-0', 'start-50', 'translate-middle-x');
+  navbarContainer.style.width = '';
+  navbarContainer.style.maxWidth = '';
+  navbarContainer.style.padding = '';
+}
+});
+
+// Get all navigation links
+const navLinks = document.querySelectorAll('.nav-link');
+
+// Get the collapse element
+const navbarCollapse = document.getElementById('navbarNav');
+const bsCollapse = new bootstrap.Collapse(navbarCollapse, {toggle: false});
+
+// Add click event listener to each navigation link
+navLinks.forEach(function(navLink) {
+navLink.addEventListener('click', function() {
+  // Close the navbar when a link is clicked
+  if (navbarCollapse.classList.contains('show')) {
+    bsCollapse.hide();
+  }
+});
+});
+
+// Close navbar when clicking outside
+document.addEventListener('click', function(event) {
+// Check if the navbar is expanded and the click is outside the navbar
+const isNavbarExpanded = navbarCollapse.classList.contains('show');
+const isClickInsideNavbar = navbarCollapse.contains(event.target);
+const isClickOnToggler = event.target.classList.contains('navbar-toggler') || 
+                        event.target.classList.contains('navbar-toggler-icon');
+
+if (isNavbarExpanded && !isClickInsideNavbar && !isClickOnToggler) {
+  bsCollapse.hide();
+}
+});
+});
+</script>
+<!-- Welcome Section -->
+<section class="welcome-section section">
+  <div class="containers">
+      <div class="row">
+          <div class="col-md-8 welcome-text" data-aos="fade-right" data-aos-duration="1000">
+              <h2 style="color: #0047AB; font-weight: bolder;" class="text-center mb-4" data-aos="fade-up" data-aos-delay="200">"Welcome to Tenkasi District"</h2>
+              <p class="text-muted" style="text-align: justify; text-justify: inter-word;" data-aos="fade-up" data-aos-delay="300">
+                  The new Tenkasi district was bifurcated from Tirunelveli in 2019. Tenkasi District is located in the south western region of Tamilnadu. It is surrounded by Tirunelveli district in the south east and Virudhunagar in the North. The total geographical area of the district is 2882.44sq.kms. It comprises of 8 Talukas 5 Municipalities, 18 Town panchayaths, 246 revenue villages, 221 village panchayaths.
+                  <br><br>
+                  The Chittar river flows through the district. The famous Coutrallam Falls is on Chittar River. The waterfalls of Courtallam are said to have medicinal value as they run through forest and herbs before their descent. Courtallam is called as <strong>"Spa of South India."</strong> Tamil poet ThirikoodaRasappaKavirayar sang about the beauty of this place in his "KutraalaKuravanji".</p>
+
+             
+              <a href="../About US/aboutus.html" class="btn btn-primary" style="width: 150px; height: 40px;" data-aos="zoom-in" data-aos-delay="500">READ MORE</a>
+          </div>
+          <div class="col-md-4 d-flex align-items-center">
+              <div class="welcome-map" data-aos="fade-left" data-aos-duration="1000">
+                  <img src="../img/tenkasimap.png" alt="Tenkasi District Map" class="img-fluid" style="width: 80%;">
+              </div>
+          </div>
+      </div>
+  </div>
+</section>
+
+<section class="incentives-section section bg-white "  style="padding-top: 1rem !important; padding-bottom: 1rem !important;">
+    <div class="container">
+        <!-- Header Row -->
+        <div class="row align-items-center mb-4">
+            <div class="col-12 col-md-3">
+                <h3 class="section-title mb-0" style="margin-top: 44px;">INDUSTRIAL PROFILE</h3>
+            </div>
+            <div class="col-12 col-md-6 text-center">
+                <p class="incentives-intro mb-0">
+                    Tenkasi, located in the southern state of Tamil Nadu, India, is an emerging industrial hub known for its diverse manufacturing and service sectors.
+                </p>
+            </div>
+            <div class="col-12 col-md-3 text-end">
+                <a href="../Industrial Profile/Industrial.html" class="btn view-more-btn" style="margin-top: 13px; width: 100px;">VIEW MORE</a>
+            </div>
+            
+        </div>
+      <!-- Carousel Images Row -->
+      <div class="carousel-flex-wrapper position-relative d-flex align-items-center justify-content-between" data-aos="fade-up" data-aos-duration="1200">
+        <div class="carousel-images-track-wrapper w-100 overflow-hidden position-relative" style="touch-action: pan-y;">
+  <div class="carousel-images-track d-flex align-items-center" style="will-change: transform;">
+
+  </div>
+          </div>
+        </div>
+        <div class="text-center mt-3" id="carousel-title-block" data-aos="fade-up" data-aos-delay="300">
+        <!-- Loading Line -->
+        <div class="loading-line-container" style="width: 120px; height: 2px; background-color: #e0e7ff; border-radius: 1px; margin: 0 auto 15px auto; overflow: hidden;">
+          <div class="loading-line" style="width: 0%; height: 100%; background: linear-gradient(90deg, #2046a3 0%, #4f46e5 100%); border-radius: 1px; transition: width 0.1s linear;"></div>
+        </div>
+        <!-- Title and number will be injected by JS -->
+        </div>
+      </div>
+      <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+      <script>
+        // Initialize AOS
+        document.addEventListener('DOMContentLoaded', function() {
+          AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true,
+            mirror: false
+          });
+          
+          // Initialize your existing carousel
+          renderCarousel();
+        });
+      
+        const industrialData = [
+        {img: '../img/saw.png', title: ' Saw Mill', number: '01'},
+          {img: '../img/brick.png', title: 'Brick Industry', number: '02'},
+          {img: '../img/match.jpg', title: 'Match Industry ', number: '03'},
+          {img: '../img/rice mill.jpg', title: 'Rice Mill', number: '04'},
+          {img: '../img/coir.jpg', title: 'Coir Industry', number: '05'},
+          {img: '../img/powerloom.jpg', title: 'Power Loom', number: '06'}
+        ];
+
+        let current = 1; // Center index
+        let isDragging = false, dragStartX = 0, dragDelta = 0, animating = false;
+        
+        // Enhanced AUTO-SCROLL VARIABLES
+        let autoScrollInterval;
+        let isPaused = false;
+        let loadingInterval;
+        let loadingProgress = 0;
+        const AUTO_SCROLL_DELAY = 1500; // 4 seconds between slides for smoother experience
+        const AUTO_SCROLL_SPEED = 800;  // Longer animation duration for smoother auto-scroll
+        const LOADING_UPDATE_INTERVAL = 40; // Update loading line every 40ms for smooth animation
+
+        // LOADING LINE FUNCTIONS
+        function startLoadingLine() {
+            stopLoadingLine();
+            loadingProgress = 0;
+            updateLoadingLine(0);
+            
+            loadingInterval = setInterval(() => {
+                if (!isPaused && !isDragging && !animating) {
+                    loadingProgress += (100 / (AUTO_SCROLL_DELAY / LOADING_UPDATE_INTERVAL));
+                    updateLoadingLine(loadingProgress);
+                    
+                    // Only trigger next slide when loading reaches exactly 100%
+                    if (loadingProgress >= 100) {
+                        autoNextSlide();
+                    }
+                }
+            }, LOADING_UPDATE_INTERVAL);
+        }
+
+        function stopLoadingLine() {
+            if (loadingInterval) {
+                clearInterval(loadingInterval);
+                loadingInterval = null;
+            }
+        }
+
+        function updateLoadingLine(progress) {
+            const loadingLine = document.querySelector('.loading-line');
+            if (loadingLine) {
+                loadingLine.style.width = Math.min(progress, 100) + '%';
+            }
+        }
+
+        function resetLoadingLine() {
+            loadingProgress = 0;
+            updateLoadingLine(0);
+        }
+
+        // AUTO-SCROLL FUNCTIONS with enhanced smoothness
+        function startAutoScroll() {
+            // Remove the separate auto-scroll interval since loading line now controls the timing
+        }
+
+        function stopAutoScroll() {
+            if (autoScrollInterval) {
+                clearInterval(autoScrollInterval);
+                autoScrollInterval = null;
+            }
+        }
+
+        function pauseAutoScroll() {
+            isPaused = true;
+            setTimeout(() => {
+                isPaused = false;
+            }, 3000); // Longer pause for better UX
+        }
+
+        function autoNextSlide() {
+            if (animating) return;
+            animating = true;
+            current = (current + 1) % industrialData.length;
+            
+            // Reset loading line when changing slides
+            resetLoadingLine();
+            
+            // Enhanced smooth transition for auto-scroll
+            updateTrackPosition(0, true, 'auto');
+            updateTitleWithAnimation();
+            
+            setTimeout(() => { 
+                animating = false; 
+                renderCarousel(); 
+            }, AUTO_SCROLL_SPEED);
+        }
+
+        // Enhanced responsive sizes
+        function getImageSizes() {
+            const w = window.innerWidth;
+            if (w <= 320) {
+                return { center: {w: 160, h: 120}, side: {w: 60, h: 50}, gap: 4 };
+            } else if (w <= 375) {
+                return { center: {w: 180, h: 130}, side: {w: 70, h: 55}, gap: 5 };
+            } else if (w <= 425) {
+                return { center: {w: 200, h: 140}, side: {w: 80, h: 60}, gap: 6 };
+            } else if (w <= 600) {
+                return { center: {w: 260, h: 180}, side: {w: 110, h: 80}, gap: 10 };
+            } else if (w <= 768) {
+                return { center: {w: 300, h: 200}, side: {w: 130, h: 95}, gap: 15 };
+            } else if (w <= 900) {
+                return { center: {w: 340, h: 220}, side: {w: 150, h: 110}, gap: 18 };
+            } else if (w <= 1200) {
+                return { center: {w: 480, h: 320}, side: {w: 200, h: 140}, gap: 28 };
+            } else {
+                return { center: {w: 600, h: 380}, side: {w: 260, h: 180}, gap: 40 };
+            }
+        }
+
+        function renderCarousel() {
+            const track = document.querySelector('.carousel-images-track');
+            if (!track) return;
+            
+            track.innerHTML = '';
+            const {center, side, gap} = getImageSizes();
+            
+            // Add images to track with enhanced styling
+            industrialData.forEach((item, idx) => {
+                const div = document.createElement('div');
+                if (idx === current) {
+                    div.className = 'carousel-img-center-rect';
+                    div.style.cssText = `
+                        width: ${center.w}px;
+                        height: ${center.h}px;
+                        margin: 0 ${gap}px;
+                        box-shadow: 0 12px 40px rgba(0,0,0,0.2);
+                        transform: scale(1.1);
+                        z-index: 5;
+                        position: relative;
+                    `;
+                } else {
+                    div.className = 'carousel-img-side';
+                    div.style.cssText = `
+                        width: ${side.w}px;
+                        height: ${side.h}px;
+                        margin: 0 ${gap}px;
+                        box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+                        transform: scale(0.9);
+                        z-index: 1;
+                        opacity: ${window.innerWidth <= 425 ? '0.7' : '0.85'};
+                    `;
+                }
+                
+                div.style.transition = 'all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94)';
+                div.style.overflow = 'hidden';
+                div.style.borderRadius = '18px';
+                div.style.flexShrink = '0';
+                div.innerHTML = `<img src="${item.img}" alt="${item.title}" style="width: 100%; height: 100%; object-fit: cover; border-radius: 18px; user-select: none; -webkit-user-drag: none;">`;
+                track.appendChild(div);
+            });
+            
+            updateTrackPosition(0);
+            updateTitleWithAnimation();
+        }
+
+        // Enhanced position update with better easing
+        function updateTrackPosition(extra = 0, animate = true, type = 'normal') {
+            const track = document.querySelector('.carousel-images-track');
+            const wrapper = document.querySelector('.carousel-images-track-wrapper');
+            if (!track) return;
+            
+            const {center, side, gap} = getImageSizes();
+            
+            // Calculate offset
+            let offset = 0;
+            for (let i = 0; i < current; i++) {
+                offset -= (i === current-1 ? side.w : side.w) + gap*2;
+            }
+            
+            const viewportWidth = window.innerWidth;
+            const containerPadding = viewportWidth <= 576 ? 15 : 30;
+            const availableWidth = viewportWidth - (containerPadding * 2);
+            
+            offset -= (center.w/2 - availableWidth/2);
+            offset += extra;
+            
+            // Enhanced transition based on interaction type
+            if (animate) {
+                if (type === 'auto') {
+                    // Smoother auto-scroll transition
+                    track.style.transition = 'transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94)';
+                } else if (type === 'snap') {
+                    // Bouncy snap-back effect
+                    track.style.transition = 'transform 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55)';
+                } else {
+                    // Standard smooth transition
+                    track.style.transition = 'transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94)';
+                }
+            } else {
+                track.style.transition = 'none';
+            }
+            
+            track.style.transform = `translateX(${offset}px)`;
+        }
+
+        // Enhanced title update with smooth animation
+        function updateTitleWithAnimation() {
+            const titleBlock = document.getElementById('carousel-title-block');
+            if (!titleBlock) return;
+            
+            // Get the loading line element
+            const loadingLineContainer = titleBlock.querySelector('.loading-line-container');
+            
+            // Fade out title content
+            const titleContent = titleBlock.querySelector('.title-content');
+            if (titleContent) {
+                titleContent.style.opacity = '0';
+                titleContent.style.transform = 'translateY(10px)';
+            }
+            
+            setTimeout(() => {
+                const fontSize = window.innerWidth <= 375 ? '1.2rem' : window.innerWidth <= 768 ? '1.4rem' : '1.5rem';
+                const numberSize = window.innerWidth <= 375 ? '1.6rem' : window.innerWidth <= 768 ? '1.8rem' : '2rem';
+                
+                // Update title content while preserving loading line
+                titleBlock.innerHTML = `
+                    <div class="loading-line-container" style="width: 70px !important; height: 2px; background-color: #e0e7ff; border-radius: 1px; margin: 0 auto 15px auto; overflow: hidden;">
+                        <div class="loading-line" style="width: ${loadingProgress}%; height: 100%; background: linear-gradient(90deg, #2046a3 0%, #4f46e5 100%); border-radius: 1px; transition: width 0.1s linear;"></div>
+                    </div>
+                    <div class="title-content" style="opacity: 1; transform: translateY(0); transition: all 0.3s ease;">
+                        <div style='font-size: ${fontSize}; color: #2046a3; font-weight: bold; margin-bottom: 5px;'>${industrialData[current].title}</div>
+                        <div style='font-size: ${numberSize}; color: #2046a3; font-weight: bold;'>${industrialData[current].number}</div>
+                    </div>
+                `;
+            }, 200);
+        }
+
+        // Enhanced drag functionality with smoother feedback
+        function onDragStart(e) {
+            if (animating) return;
+            isDragging = true;
+            dragStartX = e.type.includes('touch') ? e.touches[0].clientX : e.clientX;
+            dragDelta = 0;
+            
+            const wrapper = document.querySelector('.carousel-images-track-wrapper');
+            wrapper.classList.add('dragging');
+            wrapper.style.cursor = 'grabbing';
+            
+            pauseAutoScroll();
+            
+            if (!e.type.includes('touch')) {
+                e.preventDefault();
+            }
+        }
+
+        function onDragMove(e) {
+            if (!isDragging) return;
+            
+            if (e.type.includes('touch')) {
+                e.preventDefault();
+            }
+            
+            let x = e.type.includes('touch') ? e.touches[0].clientX : e.clientX;
+            dragDelta = x - dragStartX;
+            
+            // Enhanced damping with progressive resistance
+            let dampedDelta = dragDelta * 0.6;
+            if (Math.abs(dragDelta) > 100) {
+                dampedDelta = dragDelta * 0.4;
+            }
+            
+            updateTrackPosition(dampedDelta, false);
+        }
+
+        function onDragEnd(e) {
+            if (!isDragging) return;
+            isDragging = false;
+            
+            const wrapper = document.querySelector('.carousel-images-track-wrapper');
+            wrapper.classList.remove('dragging');
+            wrapper.style.cursor = 'grab';
+            
+            const {center} = getImageSizes();
+            const threshold = center.w / 4;
+            
+            if (dragDelta > threshold && current > 0) {
+                animating = true;
+                current = (current - 1 + industrialData.length) % industrialData.length;
+                resetLoadingLine(); // Reset loading line on manual change
+                updateTrackPosition(0, true);
+                updateTitleWithAnimation();
+                setTimeout(() => { animating = false; renderCarousel(); }, 600);
+            } else if (dragDelta < -threshold && current < industrialData.length-1) {
+                animating = true;
+                current = (current + 1) % industrialData.length;
+                resetLoadingLine(); // Reset loading line on manual change
+                updateTrackPosition(0, true);
+                updateTitleWithAnimation();
+                setTimeout(() => { animating = false; renderCarousel(); }, 600);
+            } else {
+                // Enhanced snap-back with bouncy effect
+                updateTrackPosition(0, true, 'snap');
+            }
+            dragDelta = 0;
+        }
+
+        // Enhanced event listeners setup
+        function setupEventListeners() {
+            const track = document.querySelector('.carousel-images-track-wrapper');
+            if (!track) return;
+            
+            // Remove existing listeners
+            track.removeEventListener('mousedown', onDragStart);
+            track.removeEventListener('mousemove', onDragMove);
+            track.removeEventListener('mouseup', onDragEnd);
+            track.removeEventListener('mouseleave', onDragEnd);
+            
+            // Add mouse events
+            track.addEventListener('mousedown', onDragStart);
+            track.addEventListener('mousemove', onDragMove);
+            track.addEventListener('mouseup', onDragEnd);
+            track.addEventListener('mouseleave', onDragEnd);
+            
+            // Remove existing touch listeners
+            track.removeEventListener('touchstart', onDragStart);
+            document.removeEventListener('touchmove', onDragMove);
+            document.removeEventListener('touchend', onDragEnd);
+            
+            // Add touch events
+            track.addEventListener('touchstart', onDragStart, {passive: true});
+            document.addEventListener('touchmove', onDragMove, {passive: false});
+            document.addEventListener('touchend', onDragEnd);
+
+            // Enhanced hover pause
+            track.addEventListener('mouseenter', () => {
+                isPaused = true;
+            });
+            
+            track.addEventListener('mouseleave', () => {
+                if (!isDragging) {
+                    isPaused = false;
+                }
+            });
+        }
+
+        // Enhanced resize handler
+        let resizeTimer;
+        function handleResize() {
+            clearTimeout(resizeTimer);
+            resizeTimer = setTimeout(() => {
+                renderCarousel();
+                updateTrackPosition(0, false);
+            }, 150);
+        }
+
+        window.addEventListener('resize', handleResize);
+        
+        // Initialize everything
+        document.addEventListener('DOMContentLoaded', function() {
+            renderCarousel();
+            setupEventListeners();
+            startAutoScroll();
+            startLoadingLine();
+        });
+
+        // Fallback initialization
+        setTimeout(() => {
+            renderCarousel();
+            setupEventListeners();
+            startAutoScroll();
+            startLoadingLine();
+        }, 300);
+      </script>
+ 
+    </section>
+
+  <section class="incentives-section section bg-white " style="padding-top: 1rem !important; padding-bottom: 1rem !important;">
+    <div class="container">
+        <!-- Header Row -->
+        <div class="row align-items-center mb-4">
+            <div class="col-12 col-md-3">
+                <h3 class="section-title mb-0" style="margin-top: 22px;">INCENTIVES</h3>
+            </div>
+            <div class="col-12 col-md-6 text-center">
+                <p class="incentives-intro mb-0">
+                    Discover comprehensive benefits for MSMEs, including interest subsidies, support for cleaner technologies,
+                    industrial clusters, and skill development programs.
+                </p>
+            </div>
+            <div class="col-12 col-md-3 text-end">
+                <a href="../Incentive Page/Incentives.html" class="btn view-more-btn" style="margin-top: 13px; width: 100px;">VIEW MORE</a>
+            </div>
+            
+        </div>
+
+        <hr class="mb-2">
+
+        <!-- Content Row -->
+        <div class="row">
+            <!-- Left: Image -->
+            <div class="col-12 col-lg-4 mb-4 mb-lg-0">
+                <div class="image-container">
+                    <img src="../img/abc.jpeg" alt="Industrial Windmill" class="main-image">
+                </div>
+            </div>
+            
+            <!-- Right: Incentive List -->
+            <div class="col-12 col-lg-8">
+                <div class="incentives-list">
+                    <div class="incentive-item" onclick="window.location.href='../Incentive Page/Incentives.html';" style="cursor: pointer;">
+                        <img src="../img/captial.jpg" alt="Capital Subsidy" class="incentive-icon">
+                        <div class="incentive-content">
+                            <div class="incentive-title">Capital Subsidy</div>
+                            <div class="incentive-desc">25% subsidy on eligible plant & machinery (Max: ₹150 lakh), including Trust Sector Enterprises (Max: ₹15 lakh), except for LTPT and additional capital subsidy, except for scaling up.</div>
+                        </div>
+                        <div class="incentive-arrow">
+                            <span class="arrow-circle"><i class="fas fa-arrow-right"></i></span>
+                        </div>
+                    </div>
+                    
+                    <div class="incentive-item" onclick="window.location.href='../Incentive Page/Incentives.html';" style="cursor: pointer;">
+                        <img src="../img/stamp.jpg" alt="Stamp Duty" class="incentive-icon">
+                        <div class="incentive-content">
+                            <div class="incentive-title">Stamp Duty</div>
+                            <div class="incentive-desc">New Micro and Small Enterprises (MSEs) established in 254 designated industrially backward blocks are eligible for 50% reimbursement of stamp duty and registration charges paid to the Registration Department.</div>
+                        </div>
+                        <div class="incentive-arrow">
+                            <span class="arrow-circle"><i class="fas fa-arrow-right"></i></span>
+                        </div>
+                    </div>
+                    
+                    <div class="incentive-item" onclick="window.location.href='../Incentive Page/Incentives.html';" style="cursor: pointer;">
+                        <img src="../img/Pay.jpg" alt="Payroll Subsidy" class="incentive-icon">
+                        <div class="incentive-content">
+                            <div class="incentive-title">Payroll Subsidy Guidelines</div>
+                            <div class="incentive-desc">Eligible manufacturing units can avail reimbursement of EPF contributions for the first three years, up to ₹24,000 per employee per year, if they employ more than 20 individuals.</div>
+                        </div>
+                        <div class="incentive-arrow">
+                            <span class="arrow-circle"><i class="fas fa-arrow-right"></i></span>
+                        </div>
+                    </div>
+                    
+                    <div class="incentive-item" onclick="window.location.href='../Incentive Page/Incentives.html';" style="cursor: pointer;">
+                        <img src="../img/LTPT.jpg" alt="LTPT" class="incentive-icon">
+                        <div class="incentive-content">
+                            <div class="incentive-title">Low Tension Power Tariff (LTPT)</div>
+                            <div class="incentive-desc">The Low Tension Power Tariff (LTPT) Subsidy in Tamil Nadu provides a 20% subsidy on power consumption charges for the first 36 months for MSMEs using low-tension power supply.</div>
+                        </div>
+                        <div class="incentive-arrow">
+                            <span class="arrow-circle"><i class="fas fa-arrow-right"></i></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="industrial-coop-section section bg-white" ></section>
+  <div class="container">
+      <!-- Header Row -->
+      <div class="row align-items-center mb-4">
+          <div class="col-12 col-md-3">
+              <h3 class="section-title mb-0" style="margin-top: 51px;">INDUSTRIAL<br>CO-OPERATIVE</h3>
+          </div>
+          <div class="col-12 col-md-6 text-center">
+              <p class="intro-text mb-0">
+                  Industrial Cooperatives have been organised with two objectives namely social and economic upliftment of the people living below the poverty line.
+              </p>
+          </div>
+          <div class="col-12 col-md-3 text-end">
+              <!-- Empty space for symmetry - can add button if needed -->
+          </div>
+      </div>
+
+      <hr class="mb-2">
+
+      <!-- Content Row -->
+      <div class="row">
+          <!-- Left: Image -->
+          <div class="col-12 col-lg-4 mb-4 mb-lg-0">
+              <div class="image-container">
+                  <img src= "../img/infrastructure.png" alt="Industrial Cooperative" class="main-image">
+              </div>
+          </div>
+          
+          <!-- Right: Content -->
+          <div class="col-12 col-lg-8">
+              <div class="content-container">
+                  <h5 class="content-heading mb-4">
+                      Industrial Cooperatives, a wing of the Department of Industries and Commerce, plays a vital role
+                  </h5>
+                  
+                  <ul class="cooperative-list">
+                      <li class="cooperative-item">
+                          <div class="bullet-icon">
+                          </div>
+                          <div class="item-content">
+<span style="font-weight: bold; font-size: 20px; color: blue;">1.</span> In providing gainful employment to the rural people in general and women in particular through production type Industrial Co-operative Societies.
+                          </div>
+                      </li>
+                      
+                      <li class="cooperative-item">
+                          <div class="bullet-icon">
+                          </div>
+                          <div class="item-content">
+                            <span style="font-weight: bold; font-size: 20px; color: blue;">2.</span> In eliminating the exploitation of workers by middlemen through Labour Contract Cooperative Societies.
+                          </div>
+                      </li>
+                      
+                      <li class="cooperative-item">
+                          <div class="bullet-icon">
+                          </div>
+                          <div class="item-content">
+                            <span style="font-weight: bold; font-size: 20px; color: blue;">3.</span> In arranging for market for the products of rural artisans through Handicrafts Cooperative Societies.
+                          </div>
+                      </li>
+                      
+                      <li class="cooperative-item">
+                          <div class="bullet-icon">
+                          </div>
+                          <div class="item-content">
+                            <span style="font-weight: bold; font-size: 20px; color: blue;">4.</span>    In providing infrastructural facilities including developed industrial sites or sheds to the small scale and tiny sector entrepreneurs through Cooperative Industrial Estates.
+                          </div>
+                      </li>
+                  </ul>
+              </div>
+          </div>
+      </div>
+  </div>
+</section>
+
+
+<!-- Photo Gallery Section -->
+<section class="photo-gallery-section section" style="margin-top: 25px; padding: 25px;">
+  <div class="container" style="max-width: 2000px; margin: 0 auto;">
+    <div style="text-align: center;">
+      <h3 class="section-title" style="color: #0c2d6b;">PHOTO GALLERY</h3>
+      <p class="text-muted mb-4">Encouraging Small Scale Industries for a Brighter Future</p>
+    </div>
+
+    <div class="photo-gallery-container">
+      <div class="photo-gallery-scroll">
+        <div class="photo-gallery-track" id="galleryTrack">
+          <!-- Images will be inserted here dynamically -->
+          <div class="loading-message">Loading images...</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+
+
+  <script>
+    let isGalleryLoading = false;
+let isGalleryLoaded = false;
+let galleryLoadTimeout = null;
+let galleryInitialized = false; // NEW: Prevent multiple initializations
+
+async function fetchGalleryImages() {
+  // Prevent multiple simultaneous calls
+  if (isGalleryLoading) {
+    console.log('⚠️  Gallery is already loading, skipping...');
+    return;
+  }
+
+  // Prevent multiple loads if already loaded
+  if (isGalleryLoaded) {
+    console.log('⚠️  Gallery already loaded, skipping...');
+    return;
+  }
+
+  isGalleryLoading = true;
+  console.log('🔄 Starting gallery load...');
+
+  try {
+    // ADD TIMEOUT to prevent hanging requests
+    const controller = new AbortController();
+    const timeoutId = setTimeout(() => controller.abort(), 10000); // 10 second timeout
+
+    const response = await fetch('https://tenkasidic-backend.onrender.com/gallery-images', {
+      signal: controller.signal
+    });
+    
+    clearTimeout(timeoutId);
+    
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
+    
+    const data = await response.json();
+    
+    if (data.success && data.images && data.images.length > 0) {
+      console.log(`✅ Successfully fetched ${data.images.length} images`);
+      const gallery = document.querySelector('.photo-gallery-scroll');
+let isDown = false;
+let startX;
+let scrollLeft;
+
+gallery.addEventListener('mousedown', (e) => {
+  isDown = true;
+  gallery.classList.add('active');
+  startX = e.pageX - gallery.offsetLeft;
+  scrollLeft = gallery.scrollLeft;
+});
+
+gallery.addEventListener('mouseleave', () => {
+  isDown = false;
+  gallery.classList.remove('active');
+});
+
+gallery.addEventListener('mouseup', () => {
+  isDown = false;
+  gallery.classList.remove('active');
+});
+
+gallery.addEventListener('mousemove', (e) => {
+  if (!isDown) return;
+  e.preventDefault();
+  const x = e.pageX - gallery.offsetLeft;
+  const walk = (x - startX) * 2; // Increase multiplier to scroll faster
+  gallery.scrollLeft = scrollLeft - walk;
+});
+
+      
+      // Remove duplicates based on secure_url
+      const uniqueImages = data.images.filter((image, index, self) => 
+        index === self.findIndex(img => img.secure_url === image.secure_url)
+      );
+      
+      console.log(`📋 After deduplication: ${uniqueImages.length} unique images`);
+      
+      // Double the unique images for infinite scroll effect
+      const images = uniqueImages.concat(uniqueImages);
+      const container = document.getElementById('galleryTrack');
+      
+      if (container) {
+        // Clear loading message
+        container.innerHTML = '';
+        
+        images.forEach((image, index) => {
+          const img = document.createElement('img');
+          img.src = image.secure_url;
+          img.alt = "Gallery Image " + (index + 1);
+          img.className = 'gallery-img';
+          img.loading = 'lazy';
+          container.appendChild(img);
+        });
+
+        isGalleryLoaded = true;
+        console.log('✅ Gallery loaded successfully');
+      }
+      
+    } else {
+      console.log('⚠️  No images found, loading sample images');
+      addSampleImages();
+    }
+  } catch (error) {
+    if (error.name === 'AbortError') {
+      console.log('⏰ Request timed out');
+    } else {
+      console.error('❌ Error fetching gallery images:', error);
+    }
+    showError('Failed to load images. Please check your connection.');
+  } finally {
+    isGalleryLoading = false;
+  }
+}
+
+// Sample images for testing
+function addSampleImages() {
+  if (isGalleryLoaded) return;
+
+  console.log('📝 Adding sample images for testing');
+  const sampleImages = [
+    'https://picsum.photos/250/200?random=1',
+    'https://picsum.photos/250/200?random=2',
+    'https://picsum.photos/250/200?random=3',
+    'https://picsum.photos/250/200?random=4',
+    'https://picsum.photos/250/200?random=5',
+    'https://picsum.photos/250/200?random=6'
+  ];
+  
+  // Double for infinite scroll
+  const images = sampleImages.concat(sampleImages);
+  const container = document.getElementById('galleryTrack');
+  
+  if (container) {
+    // Clear loading message
+    container.innerHTML = '';
+    
+    images.forEach((src, index) => {
+      const img = document.createElement('img');
+      img.src = src;
+      img.alt = "Sample Image " + (index + 1);
+      img.className = 'gallery-img';
+      img.loading = 'lazy';
+      container.appendChild(img);
+    });
+
+    isGalleryLoaded = true;
+    console.log('✅ Sample images loaded');
+  }
+}
+
+function showError(message) {
+  const container = document.getElementById('galleryTrack');
+  if (container) {
+    container.innerHTML = `<div class="error-message">${message}</div>`;
+  }
+}
+
+// FIXED: Single event listener with initialization check
+document.addEventListener('DOMContentLoaded', function() {
+  // Prevent multiple initializations
+  if (galleryInitialized) {
+    console.log('⚠️  Gallery already initialized, skipping...');
+    return;
+  }
+  
+  galleryInitialized = true;
+  console.log('🚀 DOM loaded, initializing gallery...');
+  
+  // Check if gallery container exists before proceeding
+  const galleryContainer = document.getElementById('galleryTrack');
+  if (!galleryContainer) {
+    console.log('⚠️  Gallery container not found, skipping initialization');
+    return;
+  }
+  
+  // Add a small delay to prevent rapid calls
+  galleryLoadTimeout = setTimeout(() => {
+    fetchGalleryImages();
+  }, 500); // Increased delay
+});
+
+// Cleanup function to prevent memory leaks
+window.addEventListener('beforeunload', function() {
+  if (galleryLoadTimeout) {
+    clearTimeout(galleryLoadTimeout);
+  }
+});
+
+// Debug function - call this in console if needed
+window.reloadGallery = function() {
+  isGalleryLoading = false;
+  isGalleryLoaded = false;
+  galleryInitialized = false;
+  const container = document.getElementById('galleryTrack');
+  if (container) {
+    container.innerHTML = '<div class="loading-message">Reloading images...</div>';
+    setTimeout(() => {
+      fetchGalleryImages();
+    }, 100);
+  }
+};
+  </script>
+</section>
+<!-- SCHEMES Section with updated layout -->    
+ <!-- SCHEMES Section with updated layout -->    
+ <section class="industrial-coop-section section bg-light py-5">
+    <div class="container">
+        <!-- Header Row -->
+        <div class="row align-items-center mb-4">
+            <div class="col-12 col-md-3">
+                <h3 class="section-title mb-0">SCHEMES</h3>
+            </div>
+            <div class="col-12 col-md-6 text-center">
+                <p class="intro-text mb-0">
+                  The Ministry of Micro, Small, and Medium Enterprises (MSME) in India offers various schemes to support small businesses by providing financial aid, skill development, and infrastructure support.
+                </p>
+            </div>
+            <div class="col-12 col-md-3 text-end">
+              <a href="../Schemes/Schemes.html" class="btn view-more-btn"  style="margin-top: 13px; width: 100px;">VIEW MORE</a>
+            </div>
+        </div>
+        <div class="row cards-section g-4" id="cardsContainer">
+          <!-- Card 1 -->
+          <div class="col-12 col-sm-6 col-lg-3 card-columns">
+              <div class="card-containers">
+                  <div class="image-containers">
+                      <div class="inner-images">
+                          <img src="../img/KALAI.jpg" alt="Kalaignar Kaivinai Thittam" loading="lazy">
+                      </div>
+                  </div>
+                  <div class="card-contents">
+                      <div class="card-numbers">01.</div>
+                      <h3 class="card-titles">Kalaignar Kaivinai Thittam</h3>
+                      <p class="card-descriptions">
+                           This scheme aims to preserve traditional craftsmanship while promoting self-employment opportunities.
+                      </p>
+                  </div>
+              </div>
+          </div>
+  
+          <!-- Card 2 -->
+          <div class="col-12 col-sm-6 col-lg-3 card-columns">
+              <div class="card-containers">
+                  <div class="image-containers">
+                      <div class="inner-images">
+                          <img src="../img/dr.png" alt="Annai Arignar Business Capital Subsidy Scheme" loading="lazy">
+                      </div>
+                  </div>
+                  <div class="card-contents">
+                      <div class="card-numbers">02.</div>
+                      <h3 class="card-titles">Annal Ambedkar Business Champions Scheme </h3>
+                      <p class="card-descriptions">
+                          AABCS is a financial support scheme exclusively for SC/ST entrepreneurs, providing capital subsidies and interest subvention</p>
+                  </div>
+              </div>
+          </div>
+  
+          <!-- Card 3 -->
+          <div class="col-12 col-sm-6 col-lg-3 card-columns">
+              <div class="card-containers">
+                  <div class="image-containers">
+                      <div class="inner-images">
+                          <img src="../img/needs.jpg" alt="New Entrepreneur-cum-Enterprise Development Scheme" loading="lazy">
+                      </div>
+                  </div>
+                  <div class="card-contents">
+                      <div class="card-numbers">03.</div>
+                      <h3 class="card-titles">New Entrepreneur-cum-Enterprise Development Scheme (NEEDS)</h3>
+                      <p class="card-descriptions">
+                          Promotes entrepreneurship by providing financial assistance to educated youth for establishing new businesses.
+                      </p>
+                  </div>
+              </div>
+          </div>
+  
+          <!-- Card 4 -->
+          <div class="col-12 col-sm-6 col-lg-3 card-columns">
+              <div class="card-containers">
+                  <div class="image-containers">
+                      <div class="inner-images">
+                          <img src="../img/pmegp.jpg" alt="Unemployed Youth Employment Generation Programme" loading="lazy">
+                      </div>
+                  </div>
+                  <div class="card-contents">
+                      <div class="card-numbers">04.</div>
+                      <h3 class="card-titles">Unemployed Youth Employment Generation Programme (UYEGP)</h3>
+                      <p class="card-descriptions">
+                          Designed to support unemployed youth from low-income backgrounds by providing financial assistance to start small businesses.
+                      </p>
+                  </div>
+              </div>
+          </div>
+      </div>
+    </div>
+  </section>
+  <style>
+   
+  
+   
+    
+    
+  
+    
+  
+    .cards-sections {
+        margin-top : clamp(1.5rem, 4vw, 2.5rem);
+    }
+  
+    .card-containers {
+        position: relative;
+        width: 100%;
+        max-width: 280px;
+        margin: 0 auto;
+        transition: var(--transition);
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+  
+    .card-containers:hover {
+        transform: translateY(-8px);
+    }
+  
+    .image-containers {
+        width: 100%;
+        position: relative;
+        background: white;
+        border-radius: 0 0 clamp(40px, 8vw, 80px) 0;
+        box-shadow: var(--shadow-light);
+        padding: clamp(0.75rem, 2vw, 1rem);
+        margin-bottom: clamp(1rem, 3vw, 1.25rem);
+        transition: var(--transition);
+    }
+  
+    .card-containers:hover .image-containers {
+        box-shadow: var(--shadow-hover);
+    }
+  
+    .inner-images {
+        width: 100%;
+        height: clamp(150px, 20vw, 200px);
+        overflow: hidden;
+        border-radius: 0 0 clamp(30px, 6vw, 60px) 0;
+    }
+  
+    .inner-images img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: var(--transition);
+    }
+  
+    .card-containers:hover .inner-images img {
+        transform: scale(1.05);
+    }
+  
+    .card-contents {
+        text-align: left;
+        padding: 0 clamp(0.5rem, 2vw, 0.75rem);
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+    }
+  
+    .card-numbers {
+        color: #0044cc;
+        font-size: clamp(1.125rem, 3vw, 1.25rem);
+        font-weight: bold;
+        margin-bottom: clamp(0.25rem, 1vw, 0.5rem);
+    }
+  
+    .card-titles {
+        font-size: clamp(1rem, 2.5vw, 1.125rem);
+        font-weight: bold;
+        color: #333;
+        margin-bottom: clamp(0.3rem, 1.5vw, 0.5rem);
+        line-height: 1.4;
+        flex-grow: 0;
+    }
+  
+    .card-descriptions {
+        font-size: clamp(0.875rem, 2vw, 1rem);
+        color: #666;
+        line-height: 1.4;
+        margin-bottom: 0;
+        flex-grow: 1;
+    }
+  
+    /* Staggered Animation Effect */
+    .card-columns:nth-child(odd) {
+        animation-delay: 0.1s;
+    }
+  
+    .card-columns:nth-child(even) {
+        animation-delay: 0.2s;
+    }
+  
+    /* Enhanced Responsive Design */
+  
+    /* Extra Large Screens (1400px+) */
+    @media (min-width: 1400px) {
+      
+        
+        .card-containers {
+            max-width: 300px;
+        }
+        
+        .intro-texts {
+            max-width: 700px;
+        }
+    }
+  
+    /* Large Screens (1200px+) */
+    @media (min-width: 1200px) {
+        .card-columns:nth-child(1),
+        .card-columns:nth-child(3) {
+            transform: translateY(-20px);
+        }
+  
+        .card-columns:nth-child(2),
+        .card-columns:nth-child(4) {
+            transform: translateY(20px);
+        }
+  
+        .card-columns:nth-child(1):hover,
+        .card-columns:nth-child(3):hover {
+            transform: translateY(-28px);
+        }
+  
+        .card-columns:nth-child(2):hover,
+        .card-columns:nth-child(4):hover {
+            transform: translateY(12px);
+        }
+    }
+  
+    /* Medium to Large Screens (992px - 1199px) */
+    @media (min-width: 992px) and (max-width: 1199px) {
+        .card-columns:nth-child(1),
+        .card-columns:nth-child(3) {
+            transform: translateY(-15px);
+        }
+  
+        .card-columns:nth-child(2),
+        .card-columns:nth-child(4) {
+            transform: translateY(15px);
+        }
+  
+        .card-column:nth-child(1):hover,
+        .card-columnss:nth-child(3):hover {
+            transform: translateY(-23px);
+        }
+  
+        .card-columns:nth-child(2):hover,
+        .card-columns:nth-child(4):hover {
+            transform: translateY(7px);
+        }
+    }
+  
+    /* Tablets (768px - 991px) */
+    @media (min-width: 768px) and (max-width: 991px) {
+        .card-column:nth-child(1),
+        .card-column:nth-child(3) {
+            transform: translateY(-10px);
+        }
+  
+        .card-columns:nth-child(2),
+        .card-columns:nth-child(4) {
+            transform: translateY(10px);
+        }
+  
+        .card-columns:nth-child(1):hover,
+        .card-columns:nth-child(3):hover {
+            transform: translateY(-18px);
+        }
+  
+        .card-columns:nth-child(2):hover,
+        .card-columns:nth-child(4):hover {
+            transform: translateY(2px);
+        }
+  
+        .card-containers {
+            max-width: 250px;
+        }
+    }
+  
+    /* Small Tablets and Large Phones (576px - 767px) */
+    @media (min-width: 576px) and (max-width: 767px) {
+       
+        .card-containers {
+            max-width: 240px;
+        }
+  
+        .cards-sections {
+            justify-content: center;
+        }
+    }
+  
+    /* Mobile Devices (up to 575px) */
+    @media (max-width: 575px) {
+       
+      
+        .card-containes{
+            max-width: 100%;
+        }
+  
+        .cards-sections .col-12 {
+            margin-bottom: 1.5rem;
+        }
+  
+        .cards-sections .col-12:last-child {
+            margin-bottom: 0;
+        }
+  
+        /* Reset any transforms on mobile */
+        .card-columns {
+            transform: none !important;
+        }
+  
+        .card-columns:hover {
+            transform: translateY(-4px) !important;
+        }
+    }
+  
+    /* Small Mobile (480px and below) */
+    @media (max-width: 480px) {
+        .card-containers {
+            max-width: 280px;
+        }
+  
+        .image-containers {
+            padding: 0.75rem;
+        }
+  
+        .inner-images {
+            height: 140px;
+        }
+  
+        .image-containers {
+            height: 170px;
+        }
+    }
+  
+    /* Very Small Mobile (375px and below) */
+    @media (max-width: 375px) {
+       
+  
+        .card-containers {
+            max-width: 260px;
+        }
+  
+        .header-rows {
+            margin-bottom: 1.5rem;
+        }
+    }
+  
+    /* Extra Small Mobile (320px) */
+    @media (max-width: 320px) {
+       
+  
+        .card-containers {
+            max-width: 240px;
+        }
+  
+        .image-containers {
+            padding: 0.5rem;
+            height: 160px;
+        }
+  
+        .inner-images{
+            height: 130px;
+        }
+  
+        .card-contents {
+            padding: 0 0.5rem;
+        }
+  
+       
+    }
+  
+    /* Print Styles */
+    @media print {
+        
+  
+        .card-containers {
+            break-inside: avoid;
+            margin-bottom: 1rem;
+        }
+  
+        .card-columns {
+            transform: none !important;
+        }
+    }
+  
+    /* Accessibility Improvements */
+    @media (prefers-reduced-motion: reduce) {
+        .card-containers,
+        .image-containers,
+        .inner-images img{
+            transition: none;
+        }
+  
+        .card-containers:hover,
+        .card-columns:hover {
+            transform: none !important;
+        }
+    }
+  
+    @media (prefers-contrast: high) {
+        .image-containers {
+            border: 2px solid var(--text-primary);
+        }
+  
+        .card-titles {
+            font-weight: 700;
+        }
+    }
+  
+        /* Focus States for Accessibility */
+    .card-containers:focus {
+        outline: 3px solid #0044cc;
+        outline-offset: 4px;
+    }
+  
+    /* Loading State */
+    .inner-images img {
+        background-color: #f0f0f0;
+        object-fit: fill;
+    }
+  
+    /* Hover Effects Enhancement */
+    @media (hover: hover) {
+        .card-containers {
+            cursor: pointer;
+        }
+  
+        .card-containers:hover .card-titles {
+            color: #0044cc;
+        }
+    }
+  </style>
+<footer class="py-5">
+        <div class="container" >
+            <div class="row">
+                <div class="col-md-4 mb-4 mb-md-0">
+                    <div class="d-flex align-items-center mb-3">
+                        <img src="../img/diclogo.jpg" alt="DIC Logo" style="width: 80px; height: 80px;" class="me-3">
+                    </div>
+                    <p class="text-white" style="font-size: 16px;">
+                        District Industries Centre, Tenkasi supports local entrepreneurs by providing guidance and assistance for starting and growing businesses.
+                    </p>
+                </div>
+                <div class="col-md-4 mb-4 mb-md-0">
+                    <h5 class="text-white mb-3" style="padding-right: 3px;">Useful Links</h5>
+                    <ul class="list-unstyled" style="margin-right: 3px;">
+                        <li class="mb-2" style="margin-left: 0;"><a href="../LandingPage/LandingPage.html" class="text-white text-decoration-none">Home</a></li>
+                        <li class="mb-2" style="margin-left: 0;"><a href="../About US/aboutus.html" class="text-white text-decoration-none">About Us</a></li>
+                        <li class="mb-2" style="margin-left: 0;"><a href="../Industrial Profile/Industrial.html" class="text-white text-decoration-none">Industrial Profile</a></li>
+                        <li class="mb-2" style="margin-left: 0;"><a href="../Incentive Page/Incentives.html" class="text-white text-decoration-none">Incentives</a></li>
+                        <li class="mb-2" style="margin-left: 0;"><a href="../Schemes/Schemes.html" class="text-white text-decoration-none">Schemes</a></li>
+                        <li class="mb-2" style="margin-left: 0;"><a href="../Contact Page/Contactus.html" class="text-white text-decoration-none">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 mb-4 mb-md-0">
+            <h5 class="text-white mb-3">Address</h5>
+            <ul class="list-unstyled">
+              <li class="mb-3 text-white d-flex align-items-start">
+                <i class="fas fa-map-marker-alt text-white me-2 mt-1"></i>
+                <div>
+                  <span>Tmt.P.MARIAMMAL , General Manager</span><br>
+                  <span>District Industries Centre</span><br>
+                  <span>5/5(2),5(3), Thirumalai Kovil Road</span><br>
+                  <span>Kuthukkakvalasai, Tenkasi-627803</span>
+                </div>
+              </li>
+              <li class="mb-3 text-white d-flex align-items-center">
+                <i class="fas fa-phone text-white me-2"></i>
+                <a href="tel:04633-212347" class="text-white text-decoration-none">04633-212347</a>
+              </li>
+              <li class="mb-3 text-white d-flex align-items-start">
+                <i class="fas fa-clock text-white me-2 mt-1"></i>
+                <div>
+                  <span>Working Hours:</span><br>
+                  <span>Monday - Friday: 10.00 AM to 5.45 PM</span>
+                </div>
+              </li>
+            </ul>
+        </div>
+            <div class="row mt-5">
+                <div class="col-12 text-center">
+                    <hr style="border: none; border-top: 2px solid #ccc; margin-bottom:30px;">
+                    <p style="text-align: center; font-size: 14px; color: #555;">
+                    <p class="text-white mb-0" style="font-size: 14px;">Copyright © 2025 Tenkasi DIC , Powered by <a href="https://www.brandmindz.com/" target="_blank" style="color: white; text-decoration: none; transition: color 0.3s ease;" onmouseover="this.style.color='#af6f24'" onmouseout="this.style.color='white'">Brand Mindz</a>. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+<!-- Bootstrap JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
