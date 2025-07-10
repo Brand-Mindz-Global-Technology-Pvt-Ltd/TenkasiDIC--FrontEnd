@@ -12,12 +12,34 @@
     <!-- Google Fonts - Crimson Text -->
   
     <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;600&display=swap" rel="stylesheet">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"> -->
     <link rel="stylesheet" href="./landingpage.css">
+    
 
 </head>
 <body>
-
+    <div class="container position-absolute top-0 start-50 translate-middle-x" style="z-index: 1030; padding-top: 15px; margin-top:16px;">
+        <nav class="navbar navbar-expand-lg shadow" id="mainNav">
+            <a class="navbar-brand" href="../LandingPage/LandingPage.html">
+                <img src="../img/diclogo.jpg" alt="Logo" href="../LandingPage/LandingPage.html" />
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon">
+                  <span class="middle-bar"></span>
+                </span>
+              </button>
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link active" href="../LandingPage/LandingPage.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../About US/aboutus.html">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../Industrial Profile/Industrial.html">Industrial Profile</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../Incentive Page/Incentives.html">Incentives</a></li>
+                    <li class="nav-item"><a class="nav-link " href="../Schemes/Schemes.html">Schemes</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../Contact Page/Contactus.html">Contact Us</a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
     
     <section class="header-banner">
         <!-- Poster image that shows before video loads -->
@@ -33,28 +55,7 @@
         <div class="header-overlay"></div>
         <div class="header-content">
             
-            <div class="container mt-4" style="position: absolute; top: 0; left: 0; right: 0; z-index: 10; margin-bottom: 20px;">
-                <nav class="navbar navbar-expand-lg shadow" id="mainNav">
-                    <a class="navbar-brand" href="../LandingPage/LandingPage.html">
-                        <img src="../img/diclogo.jpg" alt="Logo" href="../LandingPage/LandingPage.html" />
-                    </a>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon">
-                            <span class="middle-bar"></span>
-                        </span>
-                    </button>
-                    <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
-                        <ul class="navbar-nav">
-                            <li class="nav-item"><a class="nav-link active" href="../LandingPage/LandingPage.html">Home</a></li>
-                            <li class="nav-item"><a class="nav-link" href="../About US/aboutus.html">About Us</a></li>
-                            <li class="nav-item"><a class="nav-link" href="../Industrial Profile/Industrial.html">Industrial Profile</a></li>
-                            <li class="nav-item"><a class="nav-link" href="../Incentive Page/Incentives.html">Incentives</a></li>
-                            <li class="nav-item"><a class="nav-link " href="../Schemes/Schemes.html">Schemes</a></li>
-                            <li class="nav-item"><a class="nav-link" href="../Contact Page/Contactus.html">Contact Us</a></li>
-                        </ul>
-                    </div>
-                </nav>
-            </div>
+           
             <!-- End of navbar -->
             
             <div class="header-text-container">
@@ -1127,14 +1128,6 @@ window.reloadGallery = function() {
     </div>
   </section>
   <style>
-   
-  
-   
-    
-    
-  
-    
-  
     .cards-sections {
         margin-top : clamp(1.5rem, 4vw, 2.5rem);
     }
@@ -1471,6 +1464,9 @@ window.reloadGallery = function() {
         }
     }
   </style>
+
+
+
 <footer class="py-5">
         <div class="container" >
             <div class="row">
@@ -1483,20 +1479,20 @@ window.reloadGallery = function() {
                     </p>
                 </div>
                 <div class="col-md-4 mb-4 mb-md-0 d-flex flex-column align-items-start" style="padding-left: 0;">
-                    <h5 class="text-white mb-3" style="margin-left: 21px;">Useful Links</h5>
-                    <ul class="list-unstyled" style="margin-left: 0; padding-left: 0;">
-                        <li class="mb-2" style="margin-left: 0;"><a href="../LandingPage/LandingPage.html" class="text-white text-decoration-none">Home</a></li>
-                        <li class="mb-2" style="margin-left: 0;"><a href="../About US/aboutus.html" class="text-white text-decoration-none">About Us</a></li>
-                        <li class="mb-2" style="margin-left: 0;"><a href="../Industrial Profile/Industrial.html" class="text-white text-decoration-none">Industrial Profile</a></li>
-                        <li class="mb-2" style="margin-left: 0;"><a href="../Incentive Page/Incentives.html" class="text-white text-decoration-none">Incentives</a></li>
-                        <li class="mb-2" style="margin-left: 0;"><a href="../Schemes/Schemes.html" class="text-white text-decoration-none">Schemes</a></li>
-                        <li class="mb-2" style="margin-left: 0;"><a href="../Contact Page/Contactus.html" class="text-white text-decoration-none">Contact Us</a></li>
+                    <h5 class="text-white mb-3" style="padding-left: 10px;">Useful Links</h5>
+                    <ul class="list-unstyled" style="padding-left: 10px;"    >
+                        <li class="mb-2" ><a href="../LandingPage/LandingPage.html" class="text-white text-decoration-none">Home</a></li>
+                        <li class="mb-2" ><a href="../About US/aboutus.html" class="text-white text-decoration-none">About Us</a></li>
+                        <li class="mb-2" ><a href="../Industrial Profile/Industrial.html" class="text-white text-decoration-none">Industrial Profile</a></li>
+                        <li class="mb-2" ><a href="../Incentive Page/Incentives.html" class="text-white text-decoration-none">Incentives</a></li>
+                        <li class="mb-2" ><a href="../Schemes/Schemes.html" class="text-white text-decoration-none">Schemes</a></li>
+                        <li class="mb-2" ><a href="../Contact Page/Contactus.html" class="text-white text-decoration-none">Contact Us</a></li>
                     </ul>
                 </div>
                 <div class="col-md-4 mb-4 mb-md-0">
             <h5 class="text-white mb-3">Address</h5>
             <ul class="list-unstyled">
-              <li class="mb-3 text-white d-flex align-items-start">
+              <li class="mb-3 text-white d-flex align-items-start" style="padding-left: 25px;">
                 <i class="fas fa-map-marker-alt text-white me-2 mt-1"></i>
                 <div>
                   <span>Tmt.P.MARIAMMAL , General Manager</span><br>
@@ -1505,11 +1501,11 @@ window.reloadGallery = function() {
                   <span>Kuthukkakvalasai, Tenkasi-627803</span>
                 </div>
               </li>
-              <li class="mb-3 text-white d-flex align-items-center">
+              <li class="mb-3 text-white d-flex align-items-center" style="padding-left: 25px;">
                 <i class="fas fa-phone text-white me-2"></i>
                 <a href="tel:04633-212347" class="text-white text-decoration-none">04633-212347</a>
               </li>
-              <li class="mb-3 text-white d-flex align-items-start">
+              <li class="mb-3 text-white d-flex align-items-start" style="padding-left: 25px;">
                 <i class="fas fa-clock text-white me-2 mt-1"></i>
                 <div>
                   <span>Working Hours:</span><br>
