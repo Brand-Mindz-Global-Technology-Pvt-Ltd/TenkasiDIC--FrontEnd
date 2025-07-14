@@ -471,7 +471,7 @@ top: 8px;
 }
 
 .banner-container {
-height: 300px;
+height: 500px;
 }
 }
 
@@ -529,7 +529,7 @@ top: 7px;
 }
 
 .banner-container {
-height: 200px;
+height: 320px;
 }
 }
 
@@ -660,6 +660,7 @@ right: 10px;
   @media (max-width: 575.98px) {
     .aboutus-banner-overlay {
       top: 70%;
+      margin-bottom: 10%;
     }
     
     .aboutus-banner-title {
@@ -709,3 +710,26 @@ right: 10px;
       background-color: #b1783b;
       color: #fff;
     }
+
+@media (max-width: 767.98px) {
+  .banner-container .incentives-link {
+    left: 50%;
+    right: auto;
+    transform: translateX(-50%);
+    bottom: 40px;
+    width: max-content;
+    text-align: center;
+  }
+}
+@media (max-width: 575.98px) {
+  .banner-container .incentives-link {
+    left: 50%;
+    right: auto;
+    transform: translateX(-50%);
+    /* bottom: 20px; */
+    width: max-content;
+    text-align: center;
+    font-size: 0.8rem;
+    padding: 6px 10px;
+  }
+}

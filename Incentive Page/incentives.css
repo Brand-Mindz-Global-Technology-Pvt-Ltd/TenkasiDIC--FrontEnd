@@ -215,12 +215,12 @@ padding: 15px;
 word-break: break-all;
 }
 .banner-container {
-height: 250px;
+height: 320px;
 }
 .incentives-link {
 font-size: 0.8rem;
 padding: 6px 10px;
-bottom: 10px;
+bottom: 20px;
 right: 10px;
 }
 }
@@ -387,6 +387,7 @@ bottom: 10px;
 @media (max-width: 991.98px) {
   .aboutus-banner-overlay {
     top: 60%;
+    
   }
   
   .aboutus-banner-title {
@@ -402,6 +403,7 @@ bottom: 10px;
 @media (max-width: 767.98px) {
   .aboutus-banner-overlay {
     top: 65%;
+    
   }
   
   .aboutus-banner-title {
@@ -414,13 +416,17 @@ bottom: 10px;
   
   .aboutus-banner-overlay {
     padding: 0 15px;
+    
   }
 }
+
 
 /* Small mobile optimization */
 @media (max-width: 575.98px) {
   .aboutus-banner-overlay {
     top: 70%;
+    margin-top:13%;
+    
   }
   
   .aboutus-banner-title {
@@ -435,11 +441,11 @@ bottom: 10px;
     padding: 0 10px;
   }
 }
-
 /* Extra small mobile optimization */
 @media (max-width: 375px) {
   .aboutus-banner-overlay {
     top: 75%;
+    
   }
   
   .aboutus-banner-title {
@@ -499,4 +505,28 @@ bottom: 10px;
     z-index: 1;
     pointer-events: none;
   }
+
+@media (max-width: 767.98px) {
+  .banner-container .incentives-link {
+    left: 50%;
+    right: auto;
+    transform: translateX(-50%);
+    bottom: 20px;
+    width: max-content;
+    text-align: center;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .banner-container .incentives-link {
+    left: 50%;
+    right: auto;
+    transform: translateX(-50%);
+    bottom: 40px;
+    width: max-content;
+    text-align: center;
+    font-size: 0.8rem;
+    padding: 6px 10px;
+  }
+}
   
