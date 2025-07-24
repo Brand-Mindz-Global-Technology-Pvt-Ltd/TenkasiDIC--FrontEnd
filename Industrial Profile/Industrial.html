@@ -409,42 +409,35 @@ document.addEventListener("DOMContentLoaded", () => {
       // Display data
       data.forEach(entry => {
         const cardHTML = `
-          <div class="card mb-4 shadow-sm">
-            <div class="card-body">
-              <h3 class="card-title text-primary mb-3">
+          <div class="card">
+           <h3 class="card-title mb-3">
                 <i class="fas fa-calendar-alt me-2"></i>${entry.year}
               </h3>
-              <div class="row">
-                <div class="col-md-6">
-                  <div class="stat-item d-flex align-items-center mb-3">
-                    <div class="stat-icon me-3">
-                      <div class="circle bg-primary text-white d-flex align-items-center justify-content-center" style="width: 60px; height: 60px; border-radius: 50%;">
-                        <i class="fas fa-industry"></i>
-                      </div>
-                    </div>
-                    <div class="stat-info">
-                      <span class="stat-label d-block text-muted">Registered Units</span>
-                      <span class="stat-value h4 mb-0 text-dark">${entry.registerUnits}</span>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-md-6">
-                  <div class="stat-item d-flex align-items-center mb-3">
-                    <div class="stat-icon me-3">
-                      <div class="circle bg-success text-white d-flex align-items-center justify-content-center" style="width: 60px; height: 60px; border-radius: 50%;">
-                        <i class="fas fa-users"></i>
-                      </div>
-                    </div>
-                    <div class="stat-info">
-                      <span class="stat-label d-block text-muted">Employees</span>
-                      <span class="stat-value h4 mb-0 text-dark">${entry.employees}</span>
-                    </div>
-                  </div>
-                </div>
+          <div class="stats">
+            <div class="stat">
+              <div class="circle">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#965A00" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                  <circle cx="9" cy="7" r="4"></circle>
+                </svg>
               </div>
+              <span class="stat-label">Register Units</span>
+              <span class="stat-value">${entry.registerUnits}</span>
+            </div>
+            <div class="stat">
+              <div class="circle">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#965A00" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                  <circle cx="9" cy="7" r="4"></circle>
+                  <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                  <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                </svg>
+              </div>
+              <span class="stat-label">Employee</span>
+              <span class="stat-value">${entry.employees}</span>
             </div>
           </div>
-        `;
+        </div> `;
         container.innerHTML += cardHTML;
       });
       

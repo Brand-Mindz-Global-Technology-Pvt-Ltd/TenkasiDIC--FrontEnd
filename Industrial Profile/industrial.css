@@ -204,6 +204,7 @@
       border: 1px solid #ffd88a;
       margin: 10px;
       position: relative;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
     
     .card::after {
@@ -828,3 +829,8 @@
         background-color: #b1783b;
         color: #fff;
       }
+
+.card:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.18);
+}
