@@ -541,3 +541,25 @@ body.scrolled {
     background-color: #b1783b;
     color: #fff;
   }
+
+/* Add for font family consistency */
+p, li, ul, ol, span, div, strong, em, i, b {
+  font-family: 'Crimson Text', serif;
+}
+
+/* Add for font size consistency */
+p, li {
+  font-size: 18px;
+  padding-bottom: 8px;
+}
+
+/* Update headings for consistency */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Crimson Text', serif;
+}
+
+/* Update .description for font size consistency if used */
+.description {
+  font-size: 18px;
+  font-family: 'Crimson Text', serif;
+}

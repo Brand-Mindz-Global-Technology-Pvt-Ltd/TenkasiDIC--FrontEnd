@@ -121,6 +121,11 @@ p, li, ul, ol, span, div, strong, em, i, b {
 font-family: 'Crimson Text', serif;
 }
 
+p, li {
+  font-size: 18px;
+  padding-bottom: 8px;
+}
+
 .accordion-body {
 font-family: 'Crimson Text', serif;
 }
@@ -151,7 +156,7 @@ margin-bottom: 30px;
 .banner-image {
 width: 100%;
 height: 100%;
-object-fit: cover;
+
 }
 
 .incentives-link {
@@ -527,6 +532,18 @@ bottom: 10px;
     text-align: center;
     font-size: 0.8rem;
     padding: 6px 10px;
+  }
+}
+
+.incentive-section {
+  padding-top: 28px;
+  padding-bottom: 28px;
+}
+
+@media (max-width: 767.98px) {
+  .incentive-section {
+    padding-top: 14px;
+    padding-bottom: 14px;
   }
 }
   

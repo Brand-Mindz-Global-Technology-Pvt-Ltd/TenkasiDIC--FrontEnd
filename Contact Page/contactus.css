@@ -3,7 +3,31 @@
     color: #af6f24 !important;
 }
 body {
-font-family: 'Crimson Text', serif;
+  font-family: 'Crimson Text', serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Crimson Text', serif;
+}
+
+/* Ensure all text elements use Crimson font */
+p, li, ul, ol, span, div, strong, em, i, b {
+  font-family: 'Crimson Text', serif;
+}
+
+p, li {
+  font-size: 18px;
+  padding-bottom: 8px;
+}
+
+.section-title {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  font-family: 'Crimson Text', serif;
+}
+
+.btn {
+  font-family: 'Crimson Text', serif;
 }
 footer {
 background-color: #b1783b;
@@ -11,11 +35,6 @@ color: white;
 padding: 20px 0;
 }
 
-.section-title {
-color: #b1783b;
-font-size: 1.8rem;
-font-weight: 600;
-}
 .icon-box i {
 font-size: 1.5rem;
 color: #b1783b;
@@ -458,3 +477,18 @@ bottom: 10px;
     background-color: #b1783b;
     color: #fff;
   }
+
+/* Add a class for the custom heading color used in 'Send us a Message' */
+.heading-custom {
+  color: #B58042;
+  /* This matches the .guideline-title and .accordion-button color from incentives.css */
+}
+
+/* Apply to section titles and labels */
+.section-title,
+.fw-bold,
+.icon-box strong,
+.icon-box i,
+.form-section h5 {
+  color: #B58042 !important;
+}
