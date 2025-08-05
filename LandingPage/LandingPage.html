@@ -9,9 +9,8 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
     <!-- Font Awesome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
-    <!-- Google Fonts - Crimson Text -->
-  
-    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;600&display=swap" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Crimson+Text:wght@600&family=Roboto:wght@400;500;700&family=Poppins:wght@300;400;500;600;700&display=swap" />
     <!-- <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"> -->
     <link rel="stylesheet" href="./landingpage.css">
     
@@ -30,12 +29,12 @@
               </button>
             <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
                 <ul class="navbar-nav">
-                    <li class="nav-item"><a class="nav-link active" href="../LandingPage/LandingPage.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="../About US/aboutus.html">About Us</a></li>
-                    <li class="nav-item"><a class="nav-link" href="../Industrial Profile/Industrial.html">Industrial Profile</a></li>
-                    <li class="nav-item"><a class="nav-link" href="../Incentive Page/Incentives.html">Incentives</a></li>
-                    <li class="nav-item"><a class="nav-link " href="../Schemes/Schemes.html">Schemes</a></li>
-                    <li class="nav-item"><a class="nav-link" href="../Contact Page/Contactus.html">Contact Us</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="../LandingPage/LandingPage.html" style="font-family: 'Poppins', sans-serif; font-size: 16px;">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../About US/aboutus.html" style="font-family: 'Poppins', sans-serif; font-size: 16px;">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../Industrial Profile/Industrial.html" style="font-family: 'Poppins', sans-serif; font-size: 16px;">Industrial Profile</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../Incentive Page/Incentives.html" style="font-family: 'Poppins', sans-serif; font-size: 16px;">Incentives</a></li>
+                    <li class="nav-item"><a class="nav-link " href="../Schemes/Schemes.html" style="font-family: 'Poppins', sans-serif; font-size: 16px;">Schemes</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../Contact Page/Contactus.html" style="font-family: 'Poppins', sans-serif; font-size: 16px;">Contact Us</a></li>
                 </ul>
             </div>
         </nav>
@@ -47,7 +46,7 @@
             <img src="../img/waterfall.jpg" alt="Loading..." class="poster-img">
         </div>
         
-        <video autoplay muted loop class="bg-video" id="bgVideo" poster="../img/video-poster.jpg">
+        <video autoplay muted class="bg-video" id="bgVideo" poster="../img/video-poster.jpg">
             <source src="../img/tenkasi-page.mp4" type="video/webm">
             <!-- Fallback image if video fails to load -->
         </video>
@@ -62,9 +61,9 @@
                 <div class="header-logo-container">
                     <img src="../img/govermentlogo.png" alt="Tamil Nadu Emblem" class="header-logo">
                 </div>
-                <h1 class="header-title">Department of Industries and Commerce</h1>
-                <h1 class="header-title">District Industries Centre, Tenkasi District</h1>
-                <p class="header-description">Supporting MSMEs, startups, and entrepreneurs with financial assistance, subsidies, and training programs.</p>
+                <h1 class="header-title" style="font-family: 'Roboto', sans-serif;">Department of Industries and Commerce</h1>
+                <h1 class="header-title" style="font-family: 'Roboto', sans-serif;">District Industries Centre, Tenkasi District</h1>
+                <p class="header-description" style="font-family: 'Poppins', sans-serif; font-size: 15px;">Supporting MSMEs, startups, and entrepreneurs with financial assistance, subsidies, and training programs.</p>
             </div>
         </div>
         
@@ -91,6 +90,14 @@
                     video.play().catch(function(error) {
                         console.log('Autoplay prevented:', error);
                     });
+                });
+                
+                // Show poster image when video ends (plays only once)
+                video.addEventListener('ended', function() {
+                    console.log('Video ended, showing poster image');
+                    video.style.display = 'none';
+                    poster.classList.remove('hidden');
+                    poster.style.display = 'block';
                 });
             });
         </script>
@@ -189,14 +196,16 @@ if (isNavbarExpanded && !isClickInsideNavbar && !isClickOnToggler) {
   <div class="containers">
       <div class="row">
           <div class="col-md-8 welcome-text" data-aos="fade-right" data-aos-duration="1000">
-              <h2 style="color: #0047AB; font-weight: bolder;" class="text-center mb-4" data-aos="fade-up" data-aos-delay="200">"Welcome to Tenkasi District"</h2>
-              <p class="text-muted" style="text-align: justify; text-justify: inter-word;" data-aos="fade-up" data-aos-delay="300">
+              <!-- Link to Lemon Milk font (via CDNFonts) -->
+              <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+              <h2 style="color: #B58042; font-family: 'Roboto', 'sans-serif'; font-weight: 500;" class="text-center mb-4" data-aos="fade-up" data-aos-delay="200">"Welcome to Tenkasi District"</h2>
+              <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+              <p class="text-muted" style="text-align: justify; text-justify: inter-word; font-family: 'Poppins', sans-serif; font-size: 16px;" data-aos="fade-up" data-aos-delay="300">
                   The new Tenkasi district was bifurcated from Tirunelveli in 2019. Tenkasi District is located in the south western region of Tamilnadu. It is surrounded by Tirunelveli district in the south east and Virudhunagar in the North. The total geographical area of the district is 2882.44sq.kms. It comprises of 8 Talukas 5 Municipalities, 18 Town panchayaths, 246 revenue villages, 221 village panchayaths.
                   <br><br>
-                  The Chittar river flows through the district. The famous Coutrallam Falls is on Chittar River. The waterfalls of Courtallam are said to have medicinal value as they run through forest and herbs before their descent. Courtallam is called as <strong>"Spa of South India."</strong> Tamil poet ThirikoodaRasappaKavirayar sang about the beauty of this place in his "KutraalaKuravanji".</p>
-
-             
-              <a href="../About US/aboutus.html" class="btn btn-primary" style="width: 150px; height: 40px;" data-aos="zoom-in" data-aos-delay="500">READ MORE</a>
+                  The Chittar river flows through the district. The famous Coutrallam Falls is on Chittar River. The waterfalls of Courtallam are said to have medicinal value as they run through forest and herbs before their descent. Courtallam is called as <strong>"Spa of South India."</strong> Tamil poet ThirikoodaRasappaKavirayar sang about the beauty of this place in his "KutraalaKuravanji".
+              </p>
+              <a href="../About US/aboutus.html" class="btn btn-primary text-start" style="width: 100px; height: 35px; font-family: 'Poppins', sans-serif; font-size: 12px;" data-aos="zoom-in" data-aos-delay="500">Read more</a>
           </div>
           <div class="col-md-4 d-flex align-items-center">
               <div class="welcome-map" data-aos="fade-left" data-aos-duration="1000">
@@ -212,56 +221,54 @@ if (isNavbarExpanded && !isClickInsideNavbar && !isClickOnToggler) {
         <!-- Header Row -->
         <div class="row align-items-center mb-4">
             <div class="col-12 col-md-3">
-                <h3 class="section-title mb-0 ">INDUSTRIAL PROFILE</h3>
+                <h2 class="section-title mb-0" style="font-family: 'Roboto', sans-serif; font-weight: 500;">INDUSTRIAL PROFILE</h2>
             </div>
             <div class="col-12 col-md-6 text-center">
-                <p class="incentives-intro mb-0 fw-bold text-center">
+                <p class="incentives-intro mb-0 text-center" style="font-family: 'Poppins', sans-serif; font-size: 16px;">
                     Tenkasi, located in the southern state of Tamil Nadu, India, is an emerging industrial hub known for its diverse manufacturing and service sectors.
                 </p>
             </div>
             <div class="col-12 col-md-3 text-end">
-                <a href="../Industrial Profile/Industrial.html" class="btn view-more-btn" style="margin-top: 13px; width: 100px;">VIEW MORE</a>
+                <a href="../Industrial Profile/Industrial.html" class="btn view-more-btn" style="margin-top: 13px; width: 100px; font-family: 'Poppins', sans-serif; font-size: 12px;">View more</a>
             </div>
-            
         </div>
-      <!-- Carousel Images Row -->
-      <div class="carousel-flex-wrapper position-relative d-flex align-items-center justify-content-between" data-aos="fade-up" data-aos-duration="1200">
-        <div class="carousel-images-track-wrapper w-100 overflow-hidden position-relative" style="touch-action: pan-y;">
-  <div class="carousel-images-track d-flex align-items-center" style="will-change: transform;">
-
-  </div>
-          </div>
+        <!-- Carousel Images Row -->
+        <div class="carousel-flex-wrapper position-relative d-flex align-items-center justify-content-between" data-aos="fade-up" data-aos-duration="1200">
+            <div class="carousel-images-track-wrapper w-100 overflow-hidden position-relative" style="touch-action: pan-y;">
+                <div class="carousel-images-track d-flex align-items-center" style="will-change: transform;">
+                </div>
+            </div>
         </div>
         <div class="text-center mt-3" id="carousel-title-block" data-aos="fade-up" data-aos-delay="300">
-        <!-- Loading Line -->
-        <div class="loading-line-container" style="width: 120px; height: 2px; background-color: #e0e7ff; border-radius: 1px; margin: 0 auto 15px auto; overflow: hidden;">
-          <div class="loading-line" style="width: 0%; height: 100%; background: linear-gradient(90deg, #2046a3 0%, #4f46e5 100%); border-radius: 1px; transition: width 0.1s linear;"></div>
+            <!-- Loading Line -->
+            <div class="loading-line-container" style="width: 120px; height: 2px; background-color: #e0e7ff; border-radius: 1px; margin: 0 auto 15px auto; overflow: hidden;">
+                <div class="loading-line" style="width: 0%; height: 100%; background: linear-gradient(90deg, #B58042 0%, #B58042 100%); border-radius: 1px; transition: width 0.1s linear;"></div>
+            </div>
+            <!-- Title and number will be injected by JS -->
         </div>
-        <!-- Title and number will be injected by JS -->
-        </div>
-      </div>
-      <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-      <script>
+    </div>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
         // Initialize AOS
         document.addEventListener('DOMContentLoaded', function() {
-          AOS.init({
-            duration: 800,
-            easing: 'ease-in-out',
-            once: true,
-            mirror: false
-          });
-          
-          // Initialize your existing carousel
-          renderCarousel();
+            AOS.init({
+                duration: 800,
+                easing: 'ease-in-out',
+                once: true,
+                mirror: false
+            });
+            
+            // Initialize your existing carousel
+            renderCarousel();
         });
-      
+    
         const industrialData = [
-        {img: '../img/saw.png', title: ' Saw Mill', number: '01'},
-          {img: '../img/brick.png', title: 'Brick Industry', number: '02'},
-          {img: '../img/match.jpg', title: 'Match Industry ', number: '03'},
-          {img: '../img/rice mill.jpg', title: 'Rice Mill', number: '04'},
-          {img: '../img/coir.jpg', title: 'Coir Industry', number: '05'},
-          {img: '../img/powerloom.jpg', title: 'Power Loom', number: '06'}
+            {img: '../img/saw.png', title: ' Saw Mill', number: '01'},
+            {img: '../img/brick.png', title: 'Brick Industry', number: '02'},
+            {img: '../img/match.jpg', title: 'Match Industry ', number: '03'},
+            {img: '../img/rice mill.jpg', title: 'Rice Mill', number: '04'},
+            {img: '../img/coir.jpg', title: 'Coir Industry', number: '05'},
+            {img: '../img/powerloom.jpg', title: 'Power Loom', number: '06'}
         ];
 
         let current = 1; // Center index
@@ -481,11 +488,11 @@ if (isNavbarExpanded && !isClickInsideNavbar && !isClickOnToggler) {
                 // Update title content while preserving loading line
                 titleBlock.innerHTML = `
                     <div class="loading-line-container" style="width: 70px !important; height: 2px; background-color: #e0e7ff; border-radius: 1px; margin: 0 auto 15px auto; overflow: hidden;">
-                        <div class="loading-line" style="width: ${loadingProgress}%; height: 100%; background: linear-gradient(90deg, #2046a3 0%, #4f46e5 100%); border-radius: 1px; transition: width 0.1s linear;"></div>
+                        <div class="loading-line" style="width: ${loadingProgress}%; height: 100%; background: linear-gradient(90deg, #B58042 0%, #B58042 100%); border-radius: 1px; transition: width 0.1s linear;"></div>
                     </div>
                     <div class="title-content" style="opacity: 1; transform: translateY(0); transition: all 0.3s ease;">
-                        <div style='font-size: ${fontSize}; color: #2046a3; font-weight: bold; margin-bottom: 5px;'>${industrialData[current].title}</div>
-                        <div style='font-size: ${numberSize}; color: #2046a3; font-weight: bold;'>${industrialData[current].number}</div>
+                        <div style='font-size: ${fontSize}; color: #B58042; font-weight: bold; margin-bottom: 5px; font-family: "Roboto", sans-serif;'>${industrialData[current].title}</div>
+                        <div style='font-size: ${numberSize}; color: #B58042; font-weight: bold; font-family: "Roboto", sans-serif;'>${industrialData[current].number}</div>
                     </div>
                 `;
             }, 200);
@@ -626,22 +633,23 @@ if (isNavbarExpanded && !isClickInsideNavbar && !isClickOnToggler) {
             startAutoScroll();
             startLoadingLine();
         }, 300);
-      </script>
- 
-    </section>
+    </script>
+</section>
 
   <section class="incentives-section section bg-white" style=" padding-bottom: 1rem;">
     <div class="container">
         <!-- Header Row -->
         <div class="row align-items-center mb-4">
             <div class="col-12 col-md-3">
-                <h3 class="section-title mb-0" style="margin-top: 22px;">INCENTIVES</h3>
+                <h3 class="section-title mb-0" style="margin-top: 22px; font-family: 'Roboto', sans-serif; font-weight: 500;">INCENTIVES</h3>
             </div>
             <div class="col-12 col-md-6 text-center">
-                <p class="incentives-intro mb-0 text-center fw-bold">Discover comprehensive benefits for MSMEs, including interest subsidies, support for cleaner technologies, industrial clusters, and skill development programs.</p>
+                <p class="incentives-intro mb-0 text-center " style="font-family: 'Poppins', sans-serif; font-size: 16px;">
+                    Discover comprehensive benefits for MSMEs, including interest subsidies, support for cleaner technologies, industrial clusters, and skill development programs.
+                </p>
             </div>
             <div class="col-12 col-md-3 text-end">
-                <a href="../Incentive Page/Incentives.html" class="btn view-more-btn" style="margin-top: 13px; width: 100px;">VIEW MORE</a>
+                <a href="../Incentive Page/Incentives.html" class="btn view-more-btn" style="margin-top: 13px; width: 100px; font-family: 'Poppins', sans-serif; font-size: 12px;">View more</a>
             </div>
         </div>
 
@@ -662,8 +670,8 @@ if (isNavbarExpanded && !isClickInsideNavbar && !isClickOnToggler) {
                     <div class="incentive-item" onclick="window.location.href='../Incentive Page/Incentives.html';" style="cursor: pointer;">
                         <img src="../img/captial.jpg" alt="Capital Subsidy" class="incentive-icon">
                         <div class="incentive-content">
-                            <div class="incentive-title">Capital Subsidy</div>
-                            <div class="incentive-desc">25% subsidy on eligible plant & machinery (Max: ₹150 lakh), including Trust Sector Enterprises (Max: ₹15 lakh), except for LTPT and additional capital subsidy, except for scaling up.</div>
+                            <div class="incentive-title" style="font-family: 'Roboto', sans-serif !important;">Capital Subsidy</div>
+                            <div class="incentive-desc" style="font-family: 'Poppins', sans-serif !important;">25% subsidy on eligible plant & machinery (Max: ₹150 lakh), including Trust Sector Enterprises (Max: ₹15 lakh), except for LTPT and additional capital subsidy, except for scaling up.</div>
                         </div>
                         <div class="incentive-arrow">
                             <span class="arrow-circle"><i class="fas fa-arrow-right"></i></span>
@@ -673,8 +681,8 @@ if (isNavbarExpanded && !isClickInsideNavbar && !isClickOnToggler) {
                     <div class="incentive-item" onclick="window.location.href='../Incentive Page/Incentives.html';" style="cursor: pointer;">
                         <img src="../img/stamp.jpg" alt="Stamp Duty" class="incentive-icon">
                         <div class="incentive-content">
-                            <div class="incentive-title">Stamp Duty</div>
-                            <div class="incentive-desc">New Micro and Small Enterprises (MSEs) established in 254 designated industrially backward blocks are eligible for 50% reimbursement of stamp duty and registration charges paid to the Registration Department.</div>
+                            <div class="incentive-title" style="font-family: 'Roboto', sans-serif !important;">Stamp Duty</div>
+                            <div class="incentive-desc" style="font-family: 'Poppins', sans-serif !important;">New Micro and Small Enterprises (MSEs) established in 254 designated industrially backward blocks are eligible for 50% reimbursement of stamp duty and registration charges paid to the Registration Department.</div>
                         </div>
                         <div class="incentive-arrow">
                             <span class="arrow-circle"><i class="fas fa-arrow-right"></i></span>
@@ -684,8 +692,8 @@ if (isNavbarExpanded && !isClickInsideNavbar && !isClickOnToggler) {
                     <div class="incentive-item" onclick="window.location.href='../Incentive Page/Incentives.html';" style="cursor: pointer;">
                         <img src="../img/Pay.jpg" alt="Payroll Subsidy" class="incentive-icon">
                         <div class="incentive-content">
-                            <div class="incentive-title">Payroll Subsidy Guidelines</div>
-                            <div class="incentive-desc">Eligible manufacturing units can avail reimbursement of EPF contributions for the first three years, up to ₹24,000 per employee per year, if they employ more than 20 individuals.</div>
+                            <div class="incentive-title" style="font-family: 'Roboto', sans-serif !important;">Payroll Subsidy Guidelines</div>
+                            <div class="incentive-desc" style="font-family: 'Poppins', sans-serif !important;">Eligible manufacturing units can avail reimbursement of EPF contributions for the first three years, up to ₹24,000 per employee per year, if they employ more than 20 individuals.</div>
                         </div>
                         <div class="incentive-arrow">
                             <span class="arrow-circle"><i class="fas fa-arrow-right"></i></span>
@@ -695,8 +703,8 @@ if (isNavbarExpanded && !isClickInsideNavbar && !isClickOnToggler) {
                     <div class="incentive-item" onclick="window.location.href='../Incentive Page/Incentives.html';" style="cursor: pointer;">
                         <img src="../img/LTPT.jpg" alt="LTPT" class="incentive-icon">
                         <div class="incentive-content">
-                            <div class="incentive-title">Low Tension Power Tariff (LTPT)</div>
-                            <div class="incentive-desc">The Low Tension Power Tariff (LTPT) Subsidy in Tamil Nadu provides a 20% subsidy on power consumption charges for the first 36 months for MSMEs using low-tension power supply.</div>
+                            <div class="incentive-title" style="font-family: 'Roboto', sans-serif !important;">Low Tension Power Tariff (LTPT)</div>
+                            <div class="incentive-desc" style="font-family: 'Poppins', sans-serif !important;">The Low Tension Power Tariff (LTPT) Subsidy in Tamil Nadu provides a 20% subsidy on power consumption charges for the first 36 months for MSMEs using low-tension power supply.</div>
                         </div>
                         <div class="incentive-arrow">
                             <span class="arrow-circle"><i class="fas fa-arrow-right"></i></span>
@@ -716,10 +724,12 @@ if (isNavbarExpanded && !isClickInsideNavbar && !isClickOnToggler) {
       <!-- Header Row -->
       <div class="row align-items-center mb-4 mt-2">
           <div class="col-12 col-md-3">
-              <h3 class="section-title mb-0 ">INDUSTRIAL<br>CO-OPERATIVE</h3>
+              <h3 class="section-title mb-0" style="font-family: 'Roboto', sans-serif; font-weight: 500;">
+                INDUSTRIAL<br>CO-OPERATIVE
+              </h3>
           </div>
           <div class="col-12 col-md-6 text-center">
-              <p class="intro-text mb-0" style="font-weight: bold;">
+              <p class="incentives-intro mb-0 text-center" style="color: #666666; font-family: 'Poppins', sans-serif; font-size: 16px;">
                   Industrial Cooperatives have been organised with two objectives namely social and economic upliftment of the people living below the poverty line.
               </p>
           </div>
@@ -741,41 +751,34 @@ if (isNavbarExpanded && !isClickInsideNavbar && !isClickOnToggler) {
           <!-- Right: Content -->
           <div class="col-12 col-lg-8">
               <div class="content-container">
-                  <h5 class="content-heading mb-4">
+                  <h5 class="content-heading mb-4" style="font-family: 'Roboto', sans-serif; font-weight: 500;">
                       Industrial Cooperatives, a wing of the Department of Industries and Commerce, plays a vital role
                   </h5>
                   
-                  <ul class="cooperative-list">
-                      <li class="cooperative-item">
-                          <div class="bullet-icon">
-                          </div>
-                          <div class="item-content">
-<span style="font-weight: bold; font-size: 20px; color: blue;">1.</span> In providing gainful employment to the rural people in general and women in particular through production type Industrial Co-operative Societies.
-                          </div>
+                  <ul class="cooperative-list" style="font-family: 'Poppins', sans-serif; font-size: 16px; list-style: none; padding-left: 0;">
+                      <li class="cooperative-item" style="display: flex; align-items: flex-start; margin-bottom: 10px;">
+                          <span style="font-weight: bold; font-size: 20px; color: #B58042; margin-right: 8px; line-height: 1.5;">1.</span>
+                          <span style="font-family: 'Poppins', sans-serif; font-size: 16px; display: block; line-height: 1.5;">
+                            In providing gainful employment to the rural people in general and women in particular through production type Industrial Co-operative Societies.
+                          </span>
                       </li>
-                      
-                      <li class="cooperative-item">
-                          <div class="bullet-icon">
-                          </div>
-                          <div class="item-content">
-                            <span style="font-weight: bold; font-size: 20px; color: blue;">2.</span> In eliminating the exploitation of workers by middlemen through Labour Contract Cooperative Societies.
-                          </div>
+                      <li class="cooperative-item" style="display: flex; align-items: flex-start; margin-bottom: 10px;">
+                          <span style="font-weight: bold; font-size: 20px; color: #B58042; margin-right: 8px; line-height: 1.5;">2.</span>
+                          <span style="font-family: 'Poppins', sans-serif; font-size: 16px; display: block; line-height: 1.5;">
+                            In eliminating the exploitation of workers by middlemen through Labour Contract Cooperative Societies.
+                          </span>
                       </li>
-                      
-                      <li class="cooperative-item">
-                          <div class="bullet-icon">
-                          </div>
-                          <div class="item-content">
-                            <span style="font-weight: bold; font-size: 20px; color: blue;">3.</span> In arranging for market for the products of rural artisans through Handicrafts Cooperative Societies.
-                          </div>
+                      <li class="cooperative-item" style="display: flex; align-items: flex-start; margin-bottom: 10px;">
+                          <span style="font-weight: bold; font-size: 20px; color: #B58042; margin-right: 8px; line-height: 1.5;">3.</span>
+                          <span style="font-family: 'Poppins', sans-serif; font-size: 16px; display: block; line-height: 1.5;">
+                            In arranging for market for the products of rural artisans through Handicrafts Cooperative Societies.
+                          </span>
                       </li>
-                      
-                      <li class="cooperative-item">
-                          <div class="bullet-icon">
-                          </div>
-                          <div class="item-content">
-                            <span style="font-weight: bold; font-size: 20px; color: blue;">4.</span>    In providing infrastructural facilities including developed industrial sites or sheds to the small scale and tiny sector entrepreneurs through Cooperative Industrial Estates.
-                          </div>
+                      <li class="cooperative-item" style="display: flex; align-items: flex-start;">
+                          <span style="font-weight: bold; font-size: 20px; color: #B58042; margin-right: 8px; line-height: 1.5;">4.</span>
+                          <span style="font-family: 'Poppins', sans-serif; font-size: 16px; display: block; line-height: 1.5;">
+                            In providing infrastructural facilities including developed industrial sites or sheds to the small scale and tiny sector entrepreneurs through Cooperative Industrial Estates.
+                          </span>
                       </li>
                   </ul>
               </div>
@@ -789,8 +792,8 @@ if (isNavbarExpanded && !isClickInsideNavbar && !isClickOnToggler) {
 <section class="photo-gallery-section section mt-2 mb-5" >
   <div class="container" style="max-width: 2000px; margin: 0 auto;">
     <div style="text-align: center;">
-      <h3 class="section-title" style="color: #0c2d6b;">PHOTO GALLERY</h3>
-      <p class="text-muted mb-4">Encouraging Small Scale Industries for a Brighter Future</p>
+      <h3 class="section-title" style="color: #B58042; font-family: 'Roboto', sans-serif; font-weight: 500;">PHOTO GALLERY</h3>
+      <p class="text-muted mb-4" style="font-family: 'Poppins', sans-serif; font-size: 16px;">Encouraging Small Scale Industries for a Brighter Future</p>
     </div>
 
     <div class="photo-gallery-container" style="position: relative;">
@@ -1041,30 +1044,30 @@ window.reloadGallery = function() {
         <!-- Header Row -->
         <div class="row align-items-center mb-4">
             <div class="col-12 col-md-3">
-                <h3 class="section-title mb-0">SCHEMES</h3>
+                <h3 class="section-title mb-0" style="font-family: 'Roboto', sans-serif; font-size: 32px; font-weight: 500;">SCHEMES</h3>
             </div>
             <div class="col-12 col-md-6 text-center">
-                <p class="intro-text mb-0">
+                <p class="intro-text mb-0" style="font-family: 'Poppins', sans-serif; font-size: 16px;">
                   The Ministry of Micro, Small, and Medium Enterprises (MSME) in India offers various schemes to support small businesses by providing financial aid, skill development, and infrastructure support.
                 </p>
             </div>
             <div class="col-12 col-md-3 text-end">
-              <a href="../Schemes/Schemes.html" class="btn view-more-btn"  style="margin-top: 13px; width: 100px;">VIEW MORE</a>
+              <a href="../Schemes/Schemes.html" class="btn view-more-btn"  style="margin-top: 13px; width: 100px; font-family: 'Poppins', sans-serif; font-size: 12px;">View more</a>
             </div>
         </div>
         <div class="row cards-section g-4" id="cardsContainer">
           <!-- Card 1 -->
           <div class="col-12 col-sm-6 col-lg-3 card-columns">
               <div class="card-containers">
-                  <div class="image-containers">
-                      <div class="inner-images">
+                <div class="image-containers" >
+                    <div class="inner-images">
                           <img src="../img/KALAI.jpg" alt="Kalaignar Kaivinai Thittam" loading="lazy">
                       </div>
                   </div>
                   <div class="card-contents">
-                      <div class="card-numbers">01.</div>
-                      <h3 class="card-titles">Kalaignar Kaivinai Thittam</h3>
-                      <p class="card-descriptions">
+                      <div class="card-numbers scheme-blue" style="font-family: 'Poppins', sans-serif; font-size: 16px;">01.</div>
+                      <h3 class="card-titles scheme-blue" style="font-family: 'Roboto', sans-serif; font-size: 20px; font-weight: 400;">Kalaignar Kaivinai Thittam</h3>
+                      <p class="card-descriptions" style="font-family: 'Poppins', sans-serif; font-size: 16px;">
                            This scheme aims to preserve traditional craftsmanship while promoting self-employment opportunities.
                       </p>
                   </div>
@@ -1074,16 +1077,17 @@ window.reloadGallery = function() {
           <!-- Card 2 -->
           <div class="col-12 col-sm-6 col-lg-3 card-columns">
               <div class="card-containers">
-                  <div class="image-containers">
-                      <div class="inner-images">
+                <div class="image-containers" >
+                    <div class="inner-images">
                           <img src="../img/dr.png" alt="Annai Arignar Business Capital Subsidy Scheme" loading="lazy">
                       </div>
                   </div>
                   <div class="card-contents">
-                      <div class="card-numbers">02.</div>
-                      <h3 class="card-titles">Annal Ambedkar Business Champions Scheme </h3>
-                      <p class="card-descriptions">
-                          AABCS is a financial support scheme exclusively for SC/ST entrepreneurs, providing capital subsidies and interest subvention</p>
+                      <div class="card-numbers scheme-blue" style="font-family: 'Poppins', sans-serif; font-size: 16px;">02.</div>
+                      <h3 class="card-titles scheme-blue" style="font-family: 'Roboto', sans-serif; font-size: 20px; font-weight: 400;">Annal Ambedkar Business Champions Scheme </h3>
+                      <p class="card-descriptions" style="font-family: 'Poppins', sans-serif; font-size: 16px;">
+                          AABCS is a financial support scheme exclusively for SC/ST entrepreneurs, providing capital subsidies and interest subvention
+                      </p>
                   </div>
               </div>
           </div>
@@ -1091,15 +1095,15 @@ window.reloadGallery = function() {
           <!-- Card 3 -->
           <div class="col-12 col-sm-6 col-lg-3 card-columns">
               <div class="card-containers">
-                  <div class="image-containers">
+                  <div class="image-containers" >
                       <div class="inner-images">
                           <img src="../img/needs.jpg" alt="New Entrepreneur-cum-Enterprise Development Scheme" loading="lazy">
                       </div>
                   </div>
                   <div class="card-contents">
-                      <div class="card-numbers">03.</div>
-                      <h3 class="card-titles">New Entrepreneur-cum-Enterprise Development Scheme (NEEDS)</h3>
-                      <p class="card-descriptions">
+                      <div class="card-numbers scheme-blue" style="font-family: 'Poppins', sans-serif; font-size: 16px;">03.</div>
+                      <h3 class="card-titles scheme-blue" style="font-family: 'Roboto', sans-serif; font-size: 20px; font-weight: 400;">New Entrepreneur-cum-Enterprise Development Scheme (NEEDS)</h3>
+                      <p class="card-descriptions" style="font-family: 'Poppins', sans-serif; font-size: 16px;">
                           Promotes entrepreneurship by providing financial assistance to educated youth for establishing new businesses.
                       </p>
                   </div>
@@ -1109,23 +1113,31 @@ window.reloadGallery = function() {
           <!-- Card 4 -->
           <div class="col-12 col-sm-6 col-lg-3 card-columns">
               <div class="card-containers">
-                  <div class="image-containers">
-                      <div class="inner-images">
+                <div class="image-containers">
+                    <div class="inner-images">
                           <img src="../img/trolly.png" alt="Unemployed Youth Employment Generation Programme" loading="lazy">
                       </div>
                   </div>
                   <div class="card-contents">
-                      <div class="card-numbers">04.</div>
-                      <h3 class="card-titles">Unemployed Youth Employment Generation Programme (UYEGP)</h3>
-                      <p class="card-descriptions">
+                      <div class="card-numbers scheme-blue" style="font-family: 'Poppins', sans-serif; font-size: 16px;">04.</div>
+                      <h3 class="card-titles scheme-blue" style="font-family: 'Roboto', sans-serif; font-size: 20px; font-weight: 400;">Unemployed Youth Employment Generation Programme (UYEGP)</h3>
+                      <p class="card-descriptions" style="font-family: 'Poppins', sans-serif; font-size: 16px;">
                           Designed to support unemployed youth from low-income backgrounds by providing financial assistance to start small businesses.
                       </p>
                   </div>
-              </div>
-          </div>
+         
       </div>
     </div>
   </section>
+  <style>
+    .scheme-blue {
+      color: #B58042 !important;
+      transition: color 0.2s;
+    }
+    .card-containers:hover .scheme-blue {
+      color: #B58042 !important;
+    }
+  </style>
   <style>
     .cards-sections {
         margin-top : clamp(1.5rem, 4vw, 2.5rem);
@@ -1188,7 +1200,7 @@ window.reloadGallery = function() {
     }
   
     .card-numbers {
-        color: #0044cc;
+        color: #B58042;
         font-size: clamp(1.125rem, 3vw, 1.25rem);
         font-weight: bold;
         margin-bottom: clamp(0.25rem, 1vw, 0.5rem);
@@ -1436,13 +1448,13 @@ window.reloadGallery = function() {
         }
   
         .card-titles {
-            font-weight: 700;
+            font-weight: 500;
         }
     }
   
         /* Focus States for Accessibility */
     .card-containers:focus {
-        outline: 3px solid #0044cc;
+        outline: 3px solid #B58042;
         outline-offset: 4px;
     }
   
@@ -1458,70 +1470,86 @@ window.reloadGallery = function() {
             cursor: pointer;
         }
   
-        .card-containers:hover .card-titles {
-            color: #0044cc;
-        }
+            .card-containers:hover .card-titles {
+        color: #B58042;
+    }
     }
   </style>
 
 
 
 <footer class="py-5">
-        <div class="container" >
-            <div class="row">
-                <div class="col-md-4 mb-4 mb-md-0">
-                    <div class="d-flex align-items-center mb-3">
-                        <img src="../img/diclogo.jpg" alt="DIC Logo" style="width: 80px; height: 80px;" class="me-3">
-                    </div>
-                    <p class="text-white" style="font-size: 16px;">
-                        District Industries Centre, Tenkasi supports local entrepreneurs by providing guidance and assistance for starting and growing businesses.
-                    </p>
+    <div class="container" >
+        <div class="row">
+            <div class="col-md-4 mb-4 mb-md-0">
+                <div class="d-flex align-items-center mb-3">
+                    <img src="../img/diclogo.jpg" alt="DIC Logo" style="width: 80px; height: 80px;" class="me-3">
                 </div>
-                <div class="col-md-4 mb-4 mb-md-0 d-flex flex-column align-items-start" style="padding-left: 0;">
-                    <h5 class="text-white mb-3" style="padding-left: 10px;">Useful Links</h5>
-                    <ul class="list-unstyled" style="padding-left: 10px;"    >
-                        <li class="mb-2" ><a href="../LandingPage/LandingPage.html" class="text-white text-decoration-none">Home</a></li>
-                        <li class="mb-2" ><a href="../About US/aboutus.html" class="text-white text-decoration-none">About Us</a></li>
-                        <li class="mb-2" ><a href="../Industrial Profile/Industrial.html" class="text-white text-decoration-none">Industrial Profile</a></li>
-                        <li class="mb-2" ><a href="../Incentive Page/Incentives.html" class="text-white text-decoration-none">Incentives</a></li>
-                        <li class="mb-2" ><a href="../Schemes/Schemes.html" class="text-white text-decoration-none">Schemes</a></li>
-                        <li class="mb-2" ><a href="../Contact Page/Contactus.html" class="text-white text-decoration-none">Contact Us</a></li>
-                    </ul>
-                </div>
-                <div class="col-md-4 mb-4 mb-md-0">
-            <h5 class="text-white mb-3">Address</h5>
-            <ul class="list-unstyled">
-              <li class="mb-3 text-white d-flex align-items-start" style="padding-left: 25px;">
-                <i class="fas fa-map-marker-alt text-white me-2 mt-1"></i>
-                <div>
-                  <span>Tmt.P.MARIAMMAL , General Manager</span><br>
-                  <span>District Industries Centre</span><br>
-                  <span>5/5(2),5(3), Thirumalai Kovil Road</span><br>
-                  <span>Kuthukkakvalasai, Tenkasi-627803</span>
-                </div>
-              </li>
-              <li class="mb-3 text-white d-flex align-items-center" style="padding-left: 25px;">
-                <i class="fas fa-phone text-white me-2"></i>
-                <a href="tel:04633-212347" class="text-white text-decoration-none">04633-212347</a>
-              </li>
-              <li class="mb-3 text-white d-flex align-items-start" style="padding-left: 25px;">
-                <i class="fas fa-clock text-white me-2 mt-1"></i>
-                <div>
-                  <span>Working Hours:</span><br>
-                  <span>Monday - Friday: 10.00 AM to 5.45 PM</span>
-                </div>
-              </li>
-            </ul>
-        </div>
-            <div class="row mt-5">
-                <div class="col-12 text-center">
-                    <hr style="border: none; border-top: 2px solid #ccc; margin-bottom:30px;">
-                    <p style="text-align: center; font-size: 14px; color: #555;">
-                    <p class="text-white mb-0" style="font-size: 14px;">Copyright © 2025 Tenkasi DIC , Powered by <a href="https://www.brandmindz.com/" target="_blank" style="color: white; text-decoration: none; transition: color 0.3s ease;" onmouseover="this.style.color='#af6f24'" onmouseout="this.style.color='white'">Brand Mindz</a>. All rights reserved.</p>
-                </div>
+                <p class="text-white" style="margin-right: 16px; font-family: 'Poppins', sans-serif; font-size: 16px;">
+                    District Industries Centre, Tenkasi supports local entrepreneurs by providing guidance and assistance for starting and growing businesses.
+                </p>
+            </div>
+            <div class="col-md-4 mb-4 mb-md-0 d-flex flex-column align-items-start" style="padding-left: 0;">
+                <h5 class="text-white mb-3" style="padding-left: 10px; font-family: 'Roboto', sans-serif; font-weight: 500;">Useful Links</h5>
+                <ul class="list-unstyled" style="margin-left: 0; padding-left: 10px;">
+                    <li class="mb-2" style="margin-left: 0;">
+                        <a href="../LandingPage/LandingPage.html" class="text-white text-decoration-none" style="font-family: 'Poppins', sans-serif; font-size: 16px;">Home</a>
+                    </li>
+                    <li class="mb-2" style="margin-left: 0;">
+                        <a href="../About US/aboutus.html" class="text-white text-decoration-none" style="font-family: 'Poppins', sans-serif; font-size: 16px;">About Us</a>
+                    </li>
+                    <li class="mb-2" style="margin-left: 0;">
+                        <a href="../Industrial Profile/Industrial.html" class="text-white text-decoration-none" style="font-family: 'Poppins', sans-serif; font-size: 16px;">Industrial Profile</a>
+                    </li>
+                    <li class="mb-2" style="margin-left: 0;">
+                        <a href="../Incentive Page/Incentives.html" class="text-white text-decoration-none" style="font-family: 'Poppins', sans-serif; font-size: 16px;">Incentives</a>
+                    </li>
+                    <li class="mb-2" style="margin-left: 0;">
+                        <a href="../Schemes/Schemes.html" class="text-white text-decoration-none" style="font-family: 'Poppins', sans-serif; font-size: 16px;">Schemes</a>
+                    </li>
+                    <li class="mb-2" style="margin-left: 0;">
+                        <a href="../Contact Page/Contactus.html" class="text-white text-decoration-none" style="font-family: 'Poppins', sans-serif; font-size: 16px;">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-md-4 mb-4 mb-md-0">
+                <h5 class="text-white mb-3" style="font-family: 'Roboto', sans-serif; font-weight: 500;">Address</h5>
+                <ul class="list-unstyled">
+                    <li class="mb-3 text-white d-flex align-items-start">
+                        <span style="font-family: 'Poppins', sans-serif; font-size: 16px;">
+                            Tmt.P.MARIAMMAL , General Manager<br>
+                            District Industries Centre<br>
+                            5/5(2),5(3), Thirumalai Kovil Road<br>
+                            Kuthukkakvalasai, Tenkasi-627803
+                        </span>
+                    </li>
+                    <li class="mb-3 text-white d-flex align-items-center">
+                        <span style="font-family: 'Poppins', sans-serif; font-size: 16px;">
+                            Land Line:&nbsp;
+                            <a href="tel:04633-212347" class="text-white text-decoration-none" style="font-family: 'Poppins', sans-serif; font-size: 16px;">04633-212347</a>
+                        </span>
+                    </li>
+                    <li class="mb-3 text-white d-flex align-items-start">
+                        <span style="font-family: 'Poppins', sans-serif; font-size: 16px;">
+                            Working Hours:<br>
+                            Monday - Friday: 10.00 AM to 5.45 PM
+                        </span>
+                    </li>
+                </ul>
             </div>
         </div>
-    </footer>
+        <div class="row mt-5">
+            <div class="col-12 text-center">
+                <hr style="border: none; border-top: 2px solid #ccc; margin-bottom:30px;">
+                <p style="text-align: center; font-size: 14px; color: #555;"></p>
+                <p class="text-white mb-0" style="font-size: 14px; font-family: 'Poppins', sans-serif;">
+                    Copyright © 2025 Tenkasi DIC , Powered by 
+                    <a href="https://www.brandmindz.com/" target="_blank" style="color: white; text-decoration: none; transition: color 0.3s ease;" onmouseover="this.style.color='#af6f24'" onmouseout="this.style.color='white'">Brand Mindz</a>. All rights reserved.
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
 
 
 <!-- Bootstrap JS -->

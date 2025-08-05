@@ -1,22 +1,37 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Poppins:wght@300;400;500;600;700&display=swap');
+
 .navbar-nav .nav-link:hover,
 .navbar-nav .nav-link.active {
    color: #af6f24 !important;
 }
-/* Apply Crimson font to entire document */
+
+/* Apply Poppins font to entire document */
 body {
-font-family: 'Crimson Text', serif;
+font-family: 'Poppins', sans-serif;
+line-height: 1.5;
+color: #333;
+max-width: 100%;
+overflow-x: hidden;
+background-color: #ffffff;
 }
 
+body.scrolled {
+padding-top: 90px;
+}
+
+/* Heading Styles - Roboto with font-weight 500 */
 h1, h2, h3, h4, h5, h6 {
-font-family: 'Crimson Text', serif;
+font-family: 'Roboto', sans-serif;
+font-weight: 500;
 }
 
 .guideline-title {
 color: #B58042; /* Updated brown tone for heading */
-font-weight: 600;
+font-weight: 500;
 position: relative;
 padding-bottom: 10px;
-font-family: 'Crimson Text', serif;
+font-family: 'Roboto', sans-serif;
 }
 
 .guideline-title::after {
@@ -36,9 +51,10 @@ border-radius: 10px;
 }
 
 .section-title {
-font-weight: bold;
+font-weight: 500;
 margin-bottom: 0.5rem;
-font-family: 'Crimson Text', serif;
+font-family: 'Roboto', sans-serif;
+color: #000000;
 }
 
 .card-style {
@@ -46,12 +62,41 @@ border: none;
 padding: 1rem;
 }
 
+/* Content Styles - Poppins for paragraphs and lists */
+p, li, ul, ol, span, div, strong, em, i, b {
+font-family: 'Poppins', sans-serif;
+}
+
+p, li {
+font-size: 16px;
+padding-bottom: 8px;
+}
+
+/* List items with circle icons alignment */
+.list-unstyled li {
+display: flex;
+align-items: flex-start;
+margin-bottom: 1rem;
+}
+
+.list-unstyled li .circle-icon {
+flex-shrink: 0;
+margin-top: 2px;
+}
+
+/* Button Styles */
+.btn {
+font-family: 'Poppins', sans-serif;
+}
 
 footer {
    background-color: #b1783b;
    color: white;
    padding: 20px 0;
+   margin-top: 50px;
+   font-family: 'Poppins', sans-serif;
 }
+
 /* Remove section divider */
 .section-divider {
 display: none;
@@ -62,7 +107,8 @@ display: none;
 background-color: transparent !important;
 color: #B58042 !important;
 box-shadow: none !important;
-font-family: 'Crimson Text', serif;
+font-family: 'Roboto', sans-serif;
+font-weight: 500;
 }
 
 .accordion-button::after {
@@ -99,6 +145,7 @@ border-radius: 50%;
 background-color: #F88D2F;
 color: white;
 margin-right: 10px;
+font-size: 14px;
 }
 
 /* Light blue background for LTPT boxes */
@@ -109,29 +156,24 @@ padding: 20px;
 height: 100%;
 }
 
+.ltpt-box h6 {
+font-family: 'Roboto', sans-serif;
+font-weight: 500;
+}
+
 /* Make text inside interest boxes darker for better visibility */
 .interest-box h6, .interest-box ul, .interest-box li {
 color: #333;
+font-family: 'Poppins', sans-serif;
+}
+
+.interest-box h6 {
+font-family: 'Roboto', sans-serif;
 font-weight: 500;
-font-family: 'Crimson Text', serif;
-}
-
-/* Ensure all text elements use Crimson font */
-p, li, ul, ol, span, div, strong, em, i, b {
-font-family: 'Crimson Text', serif;
-}
-
-p, li {
-  font-size: 18px;
-  padding-bottom: 8px;
 }
 
 .accordion-body {
-font-family: 'Crimson Text', serif;
-}
-
-.btn {
-font-family: 'Crimson Text', serif;
+font-family: 'Poppins', sans-serif;
 }
 
 @media (max-width: 767px) {
@@ -141,7 +183,6 @@ height: auto;
 }
 }
 
-
 /* Banner Styles */
 .banner-container {
 position: relative;
@@ -149,14 +190,11 @@ width: 100%;
 height: 500px;
 overflow: hidden;
 margin-bottom: 30px;
-
-
 }
 
 .banner-image {
 width: 100%;
 height: 100%;
-
 }
 
 .incentives-link {
@@ -229,9 +267,7 @@ bottom: 20px;
 right: 10px;
 }
 }
-body.scrolled {
-padding-top: 90px; /* Add padding when navbar is fixed */
-}
+
 /* Navbar Styles */
 .navbar {
 border-radius: 40px;
@@ -241,6 +277,7 @@ width: 100%;
 max-width: 1320px;
 margin: 0 auto;
 transition: all 0.3s ease;
+font-family: 'Poppins', sans-serif;
 }
 
 .navbar.fixed-top {
@@ -261,10 +298,10 @@ height: auto;
 
 .nav-link {
 position: relative;
-font-weight: 600;
 color: black !important;
 margin: 0 10px;
 transition: color 0.3s ease;
+font-family: 'Poppins', sans-serif;
 }
 
 .nav-link:hover {
@@ -351,11 +388,13 @@ bottom: 10px;
   text-shadow: 0 2px 8px rgba(0, 0, 0, 0.685);
   margin-bottom: 0.5rem;
   pointer-events: auto;
+  font-family: 'Roboto', sans-serif;
 }
 
 .aboutus-breadcrumb {
   font-size: 1.2rem;
   pointer-events: auto;
+  font-family: 'Poppins', sans-serif;
 }
 
 .aboutus-breadcrumb .breadcrumb {
@@ -425,7 +464,6 @@ bottom: 10px;
   }
 }
 
-
 /* Small mobile optimization */
 @media (max-width: 575.98px) {
   .aboutus-banner-overlay {
@@ -446,6 +484,7 @@ bottom: 10px;
     padding: 0 10px;
   }
 }
+
 /* Extra small mobile optimization */
 @media (max-width: 375px) {
   .aboutus-banner-overlay {
@@ -498,6 +537,7 @@ bottom: 10px;
     pointer-events: none;
     padding: 20px;
   }
+  
   .banner-black-overlay {
     position: absolute;
     top: 0;
@@ -545,5 +585,16 @@ bottom: 10px;
     padding-top: 14px;
     padding-bottom: 14px;
   }
+}
+
+/* Update footer headings */
+footer h5 {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+}
+
+/* Update footer content */
+footer p, footer li, footer a {
+  font-family: 'Poppins', sans-serif;
 }
   

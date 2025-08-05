@@ -1,3 +1,6 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Poppins:wght@300;400;500;600;700&display=swap');
+
 .navbar-nav .nav-link:hover,
 .navbar-nav .nav-link.active {
     color: #af6f24 !important;
@@ -30,6 +33,7 @@ width: 100%;
 max-width: 1320px;
 margin: 0 auto;
 transition: all 0.3s ease;
+font-family: 'Poppins', sans-serif;
 }
 
 .navbar.fixed-top {
@@ -50,10 +54,10 @@ height: auto;
 
 .nav-link {
 position: relative;
-font-weight: 600;
 color: black !important;
 margin: 0 10px;
 transition: color 0.3s ease;
+font-family: 'Poppins', sans-serif;
 }
 
 .nav-link:hover {
@@ -215,7 +219,8 @@ line-height: 1;
 }
 
 .title {
-font-family: "Crimson Text", serif;
+font-family: "Roboto", sans-serif;
+font-weight: 500;
 font-size: 24px;
 color: #59544e;
 margin-left: 50px;
@@ -233,7 +238,7 @@ border: none;
 }
 
 .description {
-font-family: "Crimson Text", serif;
+font-family: "Poppins", sans-serif;
 font-size: 16px;
 color: #5b5b5b;
 line-height: 1.5;
@@ -242,30 +247,36 @@ margin-top: 15px;
 
 .extra-content {
 margin-top: 20px;
-opacity: 0;
 max-height: 0;
 overflow: hidden;
-transition: all 0.3s ease;
+opacity: 0;
+transition: all 0.5s ease-in-out;
 }
 
 .extra-content.show {
+max-height: 1000px;
 opacity: 1;
-max-height: 500px;
 }
 
 .extra-content h3 {
 color: #333;
 font-size: 18px;
 margin-bottom: 10px;
+font-family: "Roboto", sans-serif;
+font-weight: 500;
 }
 
 .extra-content ul {
 padding-left: 20px;
 margin-bottom: 15px;
+font-family: "Roboto", sans-serif;
+font-size: 16px;
 }
 
 .extra-content li {
 margin-bottom: 8px;
+font-family: "Poppins", sans-serif;
+font-size: 16px;
 }
 
 .arrow-button {
@@ -296,11 +307,6 @@ height: 40px;
 transition: all 0.3s ease;
 }
 
-.arrow-button:hover .arrow-circle circle {
-fill: #b58042;
-stroke: #8b5a2b;
-}
-
 .arrow-icon {
 width: 20px;
 height: 20px;
@@ -309,11 +315,6 @@ left: 10px;
 top: 10px;
 transition: transform 0.3s ease;
 filter: brightness(0) saturate(100%) invert(40%) sepia(50%) saturate(500%) hue-rotate(20deg);
-}
-
-.arrow-button:hover .arrow-icon {
-transform: rotate(180deg);
-filter: brightness(0) saturate(100%) invert(100%);
 }
 
 .arrow-icon.rotate {
@@ -356,6 +357,7 @@ background-color: #b1783b;
 color: white;
 padding: 20px 0;
 margin-top: 50px;
+font-family: 'Poppins', sans-serif;
 }
 
 /* Tablet Styles (768px to 1024px) */
@@ -579,7 +581,7 @@ right: 10px;
   .aboutus-banner-title {
     color: #fff;
     font-size: 3rem;
-    font-weight: 700;
+    font-weight: 500;
     letter-spacing: 1px;
     text-shadow: 0 2px 8px rgba(0, 0, 0, 0.685);
     margin-bottom: 0.5rem;
@@ -618,7 +620,7 @@ right: 10px;
   
   .aboutus-breadcrumb .breadcrumb-item.active {
     color: #fff;
-    font-weight: 600;
+    font-weight: 500;
   }
   
   /* Tablet optimization */
@@ -735,22 +737,22 @@ right: 10px;
 
 /* Add for font family consistency */
 p, li, ul, ol, span, div, strong, em, i, b {
-  font-family: 'Crimson Text', serif;
+  font-family: 'Poppins', sans-serif;
 }
 
 /* Add for font size consistency */
 p, li {
-  font-size: 18px;
+  font-size: 16px;
   padding-bottom: 8px;
 }
 
 /* Update .description for font size consistency */
 .description {
-  font-size: 18px;
+  font-size: 16px;
 }
 
 /* Update .title for heading consistency */
 .title {
   color: #B58042;
-  font-weight: 600;
+  font-weight: 500;
 }

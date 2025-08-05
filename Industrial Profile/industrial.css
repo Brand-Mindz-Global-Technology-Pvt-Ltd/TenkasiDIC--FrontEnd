@@ -52,7 +52,16 @@ h1, h2, h3, h4, h5, h6 {
       height: 100%;
       object-fit: cover;
     }
-    
+    .aboutus-banner-title {
+      color: #fff;
+      font-size: 3rem;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-shadow: 0 2px 8px rgba(0, 0, 0, 0.685);
+      margin-bottom: 0.5rem;
+      pointer-events: auto;
+      font-family: 'Roboto', sans-serif;
+    }
     .incentives-link {
       position: absolute;
       bottom: 20px;
@@ -318,8 +327,8 @@ h1, h2, h3, h4, h5, h6 {
       border: 2px solid #ffd88a;
       border-radius: 15px;
       padding: 25px;
-      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+      transition: all 0.3s ease;
       position: relative;
       display: flex;
       flex-direction: column;
@@ -342,8 +351,9 @@ h1, h2, h3, h4, h5, h6 {
     }
     
     .block-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+      transform: translateY(-8px);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+      background-color: #fffef8;
     }
     
     .block-name {
