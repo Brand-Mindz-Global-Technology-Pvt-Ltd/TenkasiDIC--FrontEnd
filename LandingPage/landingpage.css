@@ -574,7 +574,7 @@ background-color: #f0f5f8;
 position: relative;
 margin: 20px;
 border-radius: 46px;
-margin-top: 40px;
+margin-top: 60px;
 
 box-shadow: 0 0 25px 5px rgba(0, 0, 0, 0.25);
 }
@@ -735,11 +735,11 @@ margin-bottom: 40px;
 }
 }
 .incentives-section{
-    margin-top: 40px;
+    margin-top: 28px;
 }
 @media (max-width:576px){
     .incentives-section{
-        margin-top: 5px;
+        margin-top: 35px;
     }
 }
    .incentives-section .nav-arrow {

@@ -40,7 +40,7 @@ p {
  font-size: 1.8rem;
  font-weight: 700;
  text-align: center;
- margin: 60px 0 30px;
+ margin: 35px 0 10px ;
 }
 
 .connect-card {
@@ -131,7 +131,7 @@ font-size: 20PX;
  width: 76%;
  border-top-right-radius: 129px;
  height: auto;
- max-height: 400px;
+ max-height: 450px;
  object-fit: fill;
 }
 
@@ -159,7 +159,7 @@ font-size: 20PX;
  }
  .connectivity-title, .admin-title {
    font-size: 1.5rem;
-   margin: 40px 0 20px;
+   margin: 50px 0 10px;
  }
 }
 
