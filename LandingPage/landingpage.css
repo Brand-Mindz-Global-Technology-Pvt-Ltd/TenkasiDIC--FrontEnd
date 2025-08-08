@@ -786,6 +786,28 @@ text-align: left !important;
     opacity: 1;
 }
 
+/* Mobile-specific video handling */
+@media (max-width: 768px) {
+    .bg-video {
+        /* Ensure video stays visible on mobile */
+        opacity: 1;
+        transition: opacity 0.3s ease-in-out;
+    }
+    
+    .video-poster.hidden {
+        /* Completely hide poster on mobile to prevent loading effects */
+        opacity: 0;
+        pointer-events: none;
+        display: none !important;
+        visibility: hidden;
+    }
+    
+    /* Prevent any loading animations on mobile */
+    .video-poster::after {
+        display: none !important;
+    }
+}
+
 /* Poster image that shows before video loads */
 .video-poster {
     position: absolute;
@@ -800,6 +822,8 @@ text-align: left !important;
 .video-poster.hidden {
     opacity: 0;
     pointer-events: none;
+    /* Ensure it stays hidden on mobile */
+    display: none !important;
 }
 
 .poster-img,

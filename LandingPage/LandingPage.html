@@ -46,7 +46,7 @@
             <img src="../img/waterfall.jpg" alt="Loading..." class="poster-img">
         </div>
         
-        <video autoplay muted class="bg-video" id="bgVideo" poster="../img/video-poster.jpg">
+        <video autoplay muted class="bg-video" id="bgVideo" poster="../img/video-poster.jpg" playsinline>
             <source src="../img/tenkasi-page.mp4" type="video/webm">
             <!-- Fallback image if video fails to load -->
         </video>
@@ -92,12 +92,17 @@
                     });
                 });
                 
-                // Show poster image when video ends (plays only once)
+                // When video ends, keep the last frame visible instead of showing poster
                 video.addEventListener('ended', function() {
-                    console.log('Video ended, showing poster image');
-                    video.style.display = 'none';
-                    poster.classList.remove('hidden');
-                    poster.style.display = 'block';
+                    console.log('Video ended, keeping last frame');
+                    // Don't show poster, just pause the video on the last frame
+                    video.pause();
+                    // Ensure video stays visible
+                    video.style.opacity = '1';
+                    video.classList.add('loaded');
+                    // Keep poster hidden
+                    poster.classList.add('hidden');
+                    poster.style.display = 'none';
                 });
             });
         </script>
