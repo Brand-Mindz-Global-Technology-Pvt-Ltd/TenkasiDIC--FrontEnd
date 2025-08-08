@@ -87,14 +87,28 @@
       <h2 style="font-family: 'Roboto', sans-serif; font-size: 32px; font-weight: 500; color: #B58042;">Total No. of MSMEs Registered under UDYAM Registration</h2>
     </div>
 
-    
+    <!-- MSME Data Horizontal Scroll Section -->
+    <div class="msme-data-section" style="margin-top: 40px; margin-bottom: 60px;">
+      <div class="msme-data-container" style="position: relative; margin-top: 40px;">
+        <!-- Left Arrow Button -->
+        <button class="msme-arrow msme-arrow-left" id="msmeArrowLeft" aria-label="Scroll Left">
+          <i class="fas fa-chevron-left"></i>
+        </button>
+        <div class="msme-data-scroll">
+          <div class="msme-data-track" id="msmeDataTrack">
+            <!-- Data cards will be inserted here dynamically -->
+            <div class="loading-message">Loading MSME data...</div>
+          </div>
+        </div>
+        <!-- Right Arrow Button -->
+        <button class="msme-arrow msme-arrow-right" id="msmeArrowRight" aria-label="Scroll Right">
+          <i class="fas fa-chevron-right"></i>
+        </button>
+      </div>
+    </div>
 
     <div class="content-container">
-
       <div id="textiles-content" class="content active"></div>
-
-
-      
     </div>
   </div>
 
@@ -370,12 +384,9 @@ document.addEventListener("DOMContentLoaded", () => {
   
   // Show loading state
   function showLoading() {
-    const container = document.getElementById("textiles-content");
+    const container = document.getElementById("msmeDataTrack");
     container.innerHTML = `
       <div class="loading-container" style="text-align: center; padding: 3rem;">
-        <div class="spinner-border text-primary" role="status">
-          <span class="visually-hidden">Loading...</span>
-        </div>
         <p class="mt-3">Loading industrial data...</p>
       </div>
     `;
@@ -412,7 +423,7 @@ document.addEventListener("DOMContentLoaded", () => {
       console.log('Response received:', response.data);
       
       const data = response.data;
-      const container = document.getElementById("textiles-content");
+      const container = document.getElementById("msmeDataTrack");
       
       // Clear loading state
       container.innerHTML = '';
@@ -420,46 +431,48 @@ document.addEventListener("DOMContentLoaded", () => {
       // Check if data is empty
       if (!data || data.length === 0) {
         container.innerHTML = `
-          <div class="alert alert-info" role="alert">
-            <i class="fas fa-info-circle me-2"></i>
-            No industrial data available at the moment.
-          </div>
+          <div class="loading-message">No industrial data available at the moment.</div>
         `;
         return;
       }
       
-      // Display data
+      // Display data in horizontal scrolling format
       data.forEach(entry => {
         const cardHTML = `
-          <div class="card">
-           <h3 class="card-title mb-3">
-                <i class="fas fa-calendar-alt me-2"></i>${entry.year}
-              </h3>
-          <div class="stats">
-            <div class="stat">
-              <div class="circle">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#965A00" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
-                  <circle cx="9" cy="7" r="4"></circle>
-                </svg>
-              </div>
-              <span class="stat-label">Register Units</span>
-              <span class="stat-value">${entry.registerUnits}</span>
+          <div class="msme-data-card">
+            <div class="msme-card-header">
+              <i class="fas fa-calendar-alt me-2"></i>
+              <span class="msme-year">${entry.year}</span>
             </div>
-            <div class="stat">
-              <div class="circle">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#965A00" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
-                  <circle cx="9" cy="7" r="4"></circle>
-                  <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
-                  <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
-                </svg>
+            <div class="msme-stats">
+              <div class="msme-stat">
+                <div class="msme-stat-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#965A00" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                    <circle cx="9" cy="7" r="4"></circle>
+                  </svg>
+                </div>
+                <div class="msme-stat-content">
+                  <span class="msme-stat-label">Register Units</span>
+                  <span class="msme-stat-value">${entry.registerUnits}</span>
+                </div>
               </div>
-              <span class="stat-label">Employee</span>
-              <span class="stat-value">${entry.employees}</span>
+              <div class="msme-stat">
+                <div class="msme-stat-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#965A00" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                    <circle cx="9" cy="7" r="4"></circle>
+                    <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                    <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                  </svg>
+                </div>
+                <div class="msme-stat-content">
+                  <span class="msme-stat-label">Employee</span>
+                  <span class="msme-stat-value">${entry.employees}</span>
+                </div>
+              </div>
             </div>
-          </div>
-        </div> `;
+          </div>`;
         container.innerHTML += cardHTML;
       });
       
@@ -493,6 +506,54 @@ document.addEventListener("DOMContentLoaded", () => {
   
   // Add retry function to global scope
   window.retryLoadData = loadIndustrialData;
+  
+  // MSME Data Scroll Functionality
+  const msmeScrollContainer = document.querySelector('.msme-data-scroll');
+  const msmeLeftBtn = document.getElementById('msmeArrowLeft');
+  const msmeRightBtn = document.getElementById('msmeArrowRight');
+  const scrollAmount = 320;
+
+  if (msmeLeftBtn && msmeRightBtn && msmeScrollContainer) {
+    msmeLeftBtn.addEventListener('click', function() {
+      msmeScrollContainer.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+    });
+    
+    msmeRightBtn.addEventListener('click', function() {
+      msmeScrollContainer.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+    });
+  }
+
+  // Mouse drag functionality for MSME data scroll
+  if (msmeScrollContainer) {
+    let isDown = false;
+    let startX;
+    let scrollLeft;
+
+    msmeScrollContainer.addEventListener('mousedown', (e) => {
+      isDown = true;
+      msmeScrollContainer.classList.add('active');
+      startX = e.pageX - msmeScrollContainer.offsetLeft;
+      scrollLeft = msmeScrollContainer.scrollLeft;
+    });
+
+    msmeScrollContainer.addEventListener('mouseleave', () => {
+      isDown = false;
+      msmeScrollContainer.classList.remove('active');
+    });
+
+    msmeScrollContainer.addEventListener('mouseup', () => {
+      isDown = false;
+      msmeScrollContainer.classList.remove('active');
+    });
+
+    msmeScrollContainer.addEventListener('mousemove', (e) => {
+      if (!isDown) return;
+      e.preventDefault();
+      const x = e.pageX - msmeScrollContainer.offsetLeft;
+      const walk = (x - startX) * 2;
+      msmeScrollContainer.scrollLeft = scrollLeft - walk;
+    });
+  }
 });
 </script>
 
